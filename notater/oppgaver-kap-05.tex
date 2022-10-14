@@ -1,0 +1,400 @@
+% -*- TeX-master: "oving04"; -*-
+\oppgaver{5}
+
+
+
+\begin{oppgave}
+De to bildene viser vektorer i $\mathbb{R} ^2$. 
+\begin{center}
+	\begin{tikzpicture}[scale=0.6,baseline=(O)]
+	\draw[->,above] (0,0) node{} -- (1,2) node{$\V{v}_1$};
+	\draw[->, right] (0,0) node{} -- (2,1) node{$\V{v}_2$};
+	\draw[->] (-1,0) {} -- (3,0) {};
+	\draw[->] (0,-1) {} -- (0,3) {};
+        \node (O) at (0,0) {};
+	\end{tikzpicture}
+\hspace{10pt}
+	\begin{tikzpicture}[scale=0.6,baseline=(O)]
+	\draw[->,above] (0,0) node{} -- (1,2) node{$\V{w}_1$};
+	\draw[->, right] (0,0) node{} -- (2,1) node{$\V{w}_2$};
+	\draw[->, right] (0,0) node{} -- (2,-1) node{$\V{w}_3$};
+	\draw[->] (-1,0) {} -- (3,0) {};
+	\draw[->] (0,-1) {} -- (0,3) {};
+        \node (O) at (0,0) {};
+	\end{tikzpicture}
+\end{center}
+I hvert tilfelle:
+Er vektorene på tegningen lineært uavhengige?
+Utspenner de~$\R^2$?
+Begrunn svarene dine.
+\end{oppgave}
+
+\begin{losning}
+Vektorene $\V{v}_1$ og~$\V{v}_2$ er lineært uavhengige og spenner
+ut~$\R^2$.
+
+Vektorene $\V{w}_1$, $\V{w}_2$ og~$\V{w}_3$ er lineært avhengige og
+spenner ut~$\R^2$.
+\end{losning}
+
+
+% \begin{oppgave}
+% Sjekk om vektorene 
+% 	$$
+% 	\begin{bmatrix}
+% 	8  \\
+% 	-8 \\
+% 	-4 \\
+% 	-6
+% 	\end{bmatrix},
+% 	\begin{bmatrix}
+% 	-7  \\
+% 	-7 \\
+% 	5 \\
+% 	6
+% 	\end{bmatrix},
+% 	\begin{bmatrix}
+% 	0  \\
+% 	3 \\
+% 	-8 \\
+% 	-4
+% 	\end{bmatrix}
+% 	$$ er lineært uavhengige.
+% \end{oppgave}
+
+% \begin{losning}
+% De er lineært uavhengige.
+% \end{losning}
+
+
+
+
+
+\begin{oppgave}
+
+\begin{punkt}
+Sjekk at vektorene $$\begin{bmatrix}
+1\\
+5\\
+-3
+\end{bmatrix}, \quad \begin{bmatrix}
+4\\
+18\\
+4
+\end{bmatrix}$$ er lineært uavhengige.
+\end{punkt}
+
+\begin{punkt}
+Finn en tredje vektor $\V{v}$ som sammen med vektorene i $\textbf{a)}$ er lineært uavhengige.
+\end{punkt}
+
+
+\begin{punkt}
+Vis at $\V{v}$ og vektorene i $\textbf{a)}$ til sammen spenner ut
+$\mathbb{R}^3$. Sammenlign med oppgave \textbf{9.} \textbf{b)} i
+kapittel~\ref{ch:vektor-og-matriselikninger}.
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Radreduser matrisen med oppgitte vektorer som kolonner eller sjekk
+direkte at det ikke finnes noe tall $c$ slik at:
+\[
+\begin{bmatrix}
+1\\
+5\\
+-3
+\end{bmatrix}=c\begin{bmatrix}
+4\\
+18\\
+4
+\end{bmatrix}
+\]
+\end{punkt}
+
+\begin{punkt}
+Lik fremgangsmåte som oppgave 5 kapittel 3.
+
+\noindent
+Merk: Å finne en vektor som er lineært uavhengig av vektorene i \textbf{a)} svarer altså til å finne en vektor som ikke er en lineærkombinasjon av vektorene i \textbf{a)}. 
+\end{punkt}
+
+\begin{punkt}
+Teorem \ref{thm:linuavhspan} gir at de tre vektorene spenner ut $\mathbb{R}^3$.
+
+Vektoren du fant i \textbf{b)} løser oppgave \textbf{9.} \textbf{b)} kapittel 3; husk at informasjonen om et andregradspolynom $p(x)=ax^2+bx+c$ kan lagres -- entydig -- i en vektor $$\V{p}=\begin{bmatrix}
+a\\
+b\\
+c
+\end{bmatrix}.$$
+\end{punkt}
+
+\end{losning}
+
+
+
+
+
+
+\begin{oppgave}
+\begin{punkt}
+Sjekk om vektorene $$
+\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}, \quad \begin{bmatrix}
+2\\
+3\\
+4
+\end{bmatrix}, \quad \begin{bmatrix}
+3\\
+4\\
+5
+\end{bmatrix}
+$$
+er lineært uavhengige.
+\end{punkt}
+
+\begin{punkt}
+% TODO omformuler (eller fjern) denne oppgaven
+Finn en vektor $\V{v}$ som er lineært uavhengig av hver av vektorene i
+$\textbf{a)}$.
+\end{punkt}
+
+\begin{punkt}
+Bruk teorien om lineært uavhengige vektorer til å vise at vektorene i $\textbf{a)}$ og vektoren $\V{v}$ til sammen spenner ut $\mathbb{R}^3$.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Ved å radredusere matrisen $$A=\begin{bmatrix}
+1 & 2 & 3\\
+2 & 3 & 4\\
+3 & 4 & 5
+\end{bmatrix}$$ ser vi at vi får en fri variabel dersom vi prøver å løse $A\V{x}=\V{0}$. Eller ekvivalent har vi ikke et pivotelement i hver kolonne. Teorem~\ref{thm:linuavh} sier da at vektorene er lineært avhengige.
+\end{punkt}
+
+\begin{punkt}
+Lik fremgangsmåte som i del $\textbf{b)}$ av forrige oppgave.
+\end{punkt}
+
+
+\begin{punkt}
+Du kan sjekke at to vilkårlige vektorer fra $\textbf{a)}$ og vektoren du fant i $\textbf{b)}$ er lineært uavhengige. Det er altså tre lineært uavhengige vektorer i det lineære spanet til vektorene i \textbf{a)} og \textbf{b)}. Derfor spenner vektorene $\mathbb{R}^3$ (Teorem \ref{thm:linuavhspan}).
+\end{punkt}
+
+\end{losning}
+
+
+
+
+
+
+
+
+
+\begin{oppgave}
+Finn ut om følgende påstander er sanne eller ikke.
+\begin{punkt}
+Hvis tre vektorer $\V{u}$, $\V{v}$ og~$\V{w}$ er lineært
+avhengige, så finnes det to tall $a$ og~$b$ slik at: 
+\[
+\V{u} = a \cdot \V{v} + b \cdot \V{w}
+\]
+\end{punkt}
+
+\begin{punkt}
+Hvis $\V{u}$ og~$\V{v}$ er lineært uavhengige,
+og $\V{v}$ og~$\V{w}$ er lineært uavhengige,
+så er $\V{u}$, $\V{v}$ og~$\V{w}$ lineært uavhengige.
+\end{punkt}
+
+\begin{punkt}
+Hvis $m>n$, så kan vi ikke ha $m$ lineært uavhengige vektorer i $\R^n$.
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+Påstand \textbf{a)} og \textbf{b)} er usanne; \textbf{c)} er sann.
+
+\noindent
+Merk: \textbf{a)} er \emph{nesten} riktig. Tre vektorer $\V{u}$, $\V{v}$ og~$\V{w}$ er lineært uavhengige dersom $$a\V{u}+b\V{v}+c\V{v}=\V{0}$$ kun har triviell løsning; $a=0$, $b=0$ og ~$c=0$. Lineær avhengighet er det motsatte, $\V{u}$, $\V{v}$ og~$\V{w}$ er lineært avhengige dersom $$a\V{u}+b\V{v}+c\V{v}=\V{0}$$ har en ikke-triviell løsning; kan ta en av $a$, $b$ og $c$ ulik null. Dette er ekvivalent med at \emph{en} av $\V{u}$, $\V{v}$ og~$\V{w}$ kan skrives som en lineærkombinasjon av de to andre (del likningen med den koeffisienten som ikke er lik null). Påstanden i oppgaveteksten er at $\V{u}$ kan skrives som en lineærkombinasjon av $\V{v}$ og $\V{w}$. Men dette kan vi ikke garantere! Et eksempel: La $\V{u}=\vv{1}{0}$, $\V{v}=\vv{0}{1}$ og~ $\V{w}=\vv{0}{y}$ (en vilkårlig vektor langs $y$-aksen). Nå er de tre vektorene lineært avhengige i $\mathbb{R}^2$, men det finnes ikke $a$ og $b$ slik at $\V{u}=a\V{v}+b\V{w}$ fordi $\V{u}$ ligger på $x$-aksen og de to andre ligger på $y$-aksen. Merk også at $\V{w}=y\V{v}+0\V{u}$ i dette tilfellet; $\V{w}$ kan altså skrives som en lineærkombinasjon av de to andre.
+\end{losning}
+
+
+
+
+
+
+
+
+% \begin{oppgave}
+% \begin{punkt}
+% Betrakt vektorene
+% \[ 
+% \begin{bmatrix} \;1\; \\ \;2\; \end{bmatrix}, 
+% \begin{bmatrix} \;2\; \\ \;3\; \end{bmatrix}, \dots, 
+% \begin{bmatrix} \;99\; \\ \;100\; \end{bmatrix}
+% \]
+% i $\mathbb{R}^2$. Vis at de utspenner $\mathbb{R}^2$. Er de lineært uavhengig? Begrunn svaret ditt.
+% \end{punkt}
+
+% \begin{punkt}
+% Betrakt vektorene
+% \[ 
+% \begin{bmatrix} 
+% \;1\; \\ 
+% \;\vdots\; \\ 
+% \;99\; 
+% \end{bmatrix}
+% \text{ og }
+% \begin{bmatrix} 
+% \;2\; \\ 
+% \;\vdots\; \\ 
+% \;100\; 
+% \end{bmatrix}
+% \]
+% i $\mathbb{R}^{99}$. Er de lineært uavhengige? Spenner de ut $\mathbb{R}^{99}$? Begrunn svarene dine.
+
+% \end{punkt}
+% \end{oppgave}
+
+% \begin{losning}
+
+% \begin{punkt}
+% Ja, de er lineært uavhengige. Dette kan sjekkes direkte ved å utforske om likningen 
+% \[ 
+% \begin{bmatrix} 
+% \;1\; \\ 
+% \;\vdots\; \\ 
+% \;99\; 
+% \end{bmatrix}
+% =c
+% \begin{bmatrix} 
+% \;2\; \\ 
+% \;\vdots\; \\ 
+% \;100\; 
+% \end{bmatrix}
+% \] har noen løsning for tallet $c$. Nei, de spenner ikke ut $\mathbb{R}^{99}$; en trenger minst nittini vektorer for å få til dette (Teorem \ref{thm:linuavhspan}).
+% \end{punkt}
+
+% \begin{punkt}
+% Nei, de er ikke lineært uavhengige; en kan maksimalt ha to lineært uavhengige vektorer i $\mathbb{R}^2$ (Teorem \ref{thm:linavhspan}). Ja, de spenner ut $\mathbb{R}^2$; samlingen inneholder to lineært uavhengeige vektorer (Teorem \ref{thm:linuavhspan}).
+% \end{punkt}
+
+% \end{losning}
+
+
+\begin{oppgave}
+La $A$ være en $m \times n$-matrise, og la $\V{v}_1$, $\V{v}_2$,
+\ldots, $\V{v}_t$ være vektorer i~$\R^n$.  Finn ut om følgende
+påstander er sanne eller ikke (gi et bevis eller et moteksempel).
+\begin{punkt}
+Hvis $\V{v}_1$, $\V{v}_2$, \ldots, $\V{v}_t$ er lineært uavhengige, så
+er $A \V{v}_1$, $A \V{v}_2$, \ldots, $A \V{v}_t$ også lineært
+uavhengige.
+\end{punkt}
+\begin{punkt}
+Hvis $A \V{v}_1$, $A \V{v}_2$, \ldots, $A \V{v}_t$ er lineært
+uavhengige, så er $\V{v}_1$, $\V{v}_2$, \ldots, $\V{v}_t$ også lineært
+uavhengige.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Påstanden er usann.
+Et veldig enkelt moteksempel:
+\[
+\v_1 = \vv{1}{0}\qquad
+\v_2 = \vv{0}{1}\qquad
+A =
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \end{bmatrix}
+\]
+\end{punkt}
+
+
+\begin{punkt}
+Påstanden er sann.  Bevis:
+
+Anta at vektorene
+$A \v_1$, $A \v_2$, \ldots, $A \v_t$
+er lineært uavhengige.
+Vi skal vise at
+$\v_1$, $\v_2$, \ldots, $\v_t$
+også er lineært uavhengige.
+
+Se på likningen
+\[
+\v_1 x_1 + \v_2 x_2 + \cdots \v_t x_t = \0.
+\]
+Anta at $(a_1, a_2, \ldots, a_t)$ er en løsning av denne likningen,
+altså at
+\[
+\v_1 a_1 + \v_2 a_2 + \cdots \v_t a_t = \0.
+\]
+Da får vi:
+\begin{align*}
+& \!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!
+(A \v_1) a_1 + (A \v_2) a_2 + \cdots + (A \v_t) a_t \\
+&= A (\v_1 a_1 + \v_2 a_2 + \cdots + \v_t a_t) \\
+&= A \cdot \0 = \0
+\end{align*}
+Men siden vi har antatt at
+$A \v_1$, $A \v_2$, \ldots, $A \v_t$
+er lineært uavhengige, betyr dette at vi må ha
+\[
+a_1 = a_2 = \cdots = a_t = 0.
+\]
+Nå kan vi oppsummere det vi har gjort.
+Vi startet med å si at
+$(a_1, a_2, \ldots, a_t)$
+er en løsning av likningen
+\[
+\v_1 x_1 + \v_2 x_2 + \cdots \v_t x_t = \0,
+\]
+og konkluderte med at da må alle $a$-ene være~$0$.
+Det betyr at denne likningen kun har den trivielle løsningen,
+og dermed er vektorene
+$\v_1$, $\v_2$, \ldots, $\v_t$
+lineært uavhengige.
+% \noindent
+% Spesialtilfellet $t=2$: Antagelsen er at $A\V{v}_1$ og $A\V{v}_2$ er lineært uavhengige. 
+%
+% Den kritiske observasjonen for å løse oppgaven: regneregler for matriser gir oss at hvis $\V{u}=c\V{w}$, så $$A\V{u}=A(c\V{w})=c(A\V{w}).$$ To vektorer som ligger på samme linje -- er lineært avhengige -- ligger altså fortsatt på samme linje etter multiplikasjon med $A$ (rent geometrisk).
+%
+% Logisk konklusjon: Men vektorene $A\V{v}_1$ og $A\V{v}_2$ er antatt lineært uavhengig, de ligger altså ikke på samme linje. Derfor kan ikke $\V{v}_1$ og $\V{v}_2$ være lineært avhengig; hvis de var lineært avhengig ville $A\V{v}_1$ og $A\V{v}_2$ vært lineært avhengig basert på observasjonen ovenfor.
+%
+% Kan du nå løse oppgaven for en generell $t>1$? 
+%
+% \noindent
+% Hint: 'ligger på linje' betyr lineært avhengig i løsningen ovenfor.
+\end{punkt}
+
+
+
+\end{losning}
+
+
+
+% \begin{oppgave}
+% Vis at påstand 1. og 2. i teorem \ref{thm:linuavh} er ekvivalente.
+% \end{oppgave}
+
+% \begin{losning}
+% Hint: likningen $A\V{x}=\V{0}$ er ekvivalent med at en lineærkombinasjon av kolonnene til $A$ er lik null-vektoren. Hva er definisjonen på lineær uavhengighet?
+% \end{losning}
+
+
+
+

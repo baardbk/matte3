@@ -1,0 +1,469 @@
+% -*- TeX-master: "oving08"; -*-
+\oppgaver{10}
+
+
+\begin{oppgave}
+Finn real- og imaginærdelen til
+\begin{punkt}
+$z^4$ 
+\end{punkt}
+\begin{punkt}
+$\frac{1}{z}$ 
+\end{punkt}
+\begin{punkt}
+$\frac{z-1}{z+1}$ 
+\end{punkt}
+\begin{punkt}
+$\frac{1}{z^2}$ 
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+Du skal skrive $z$ på formen $a+ib$ og uttrykke real- og imaginærdelen til uttrykkene ved $a$ og ~$b$.
+\end{losning}
+
+
+\begin{oppgave}
+Beregn og merk av i det komplekse planet
+\begin{punkt}
+$(1+2i)^3$ 
+\end{punkt}
+\begin{punkt}
+$\frac{5}{-3+4i}$  
+\end{punkt}
+\begin{punkt}
+$\left(\frac{2+i}{3-2i}\right)^2$
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+$-11-2i$
+\end{punkt}
+\begin{punkt}
+$-\frac{3}{5}-\frac{4}{5}i$  
+\end{punkt}
+\begin{punkt}
+$-\frac{33}{169}+\frac{56}{169}i$  
+\end{punkt}
+\end{losning}
+
+\begin{oppgave}
+Løs ligningene
+
+\begin{punkt}
+$z^2-z+5=0$ 
+\end{punkt}
+\begin{punkt}
+$z^3=2i$
+\end{punkt}
+\begin{punkt}
+$z^4=2 $
+\end{punkt}
+\begin{punkt}
+$z^5=2+2i$
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+$\frac{1}{2}(1\pm \sqrt{19}i)$ 
+\end{punkt}
+\begin{punkt}
+$\sqrt[3]{2} e^{\frac{\pi}{6} i},\sqrt[3]{2} e^{\frac{5\pi}{6} i},\sqrt[3]{2} e^{9\frac{\pi}{6} i} $
+\end{punkt}
+\begin{punkt}
+$\sqrt[4]{2},\sqrt[4]{2} e^{\frac{\pi}{2} i},\sqrt[4]{2} e^{\pi i},\sqrt[4]{2} e^{\frac{3\pi}{2} i}$
+\end{punkt}
+\begin{punkt}
+$2+2i=2\sqrt{2}e^{\frac{\pi}{4}i}$ gir:
+$2^{\frac{3}{10}} e^{\frac{\pi}{20} i},2^{\frac{3}{10}} e^{\frac{9\pi}{20} i},2^{\frac{3}{10}} e^{\frac{17\pi}{20} i},2^{\frac{3}{10}} e^{\frac{25\pi}{20} i},2^{\frac{3}{10}} e^{\frac{33\pi}{20} i}$
+\end{punkt}
+\end{losning}
+
+
+
+\begin{oppgave}
+Vis at 
+\[
+|z+w|^2+|z-w|^2=2|z|^2+2|w|^2
+\]
+for alle komplekse tall $z$ og~$w$.
+\end{oppgave}
+
+\begin{losning}
+Hint: Skriv $z=a+ib$ og $w=c+id$. Regn ut høyre- og venstre side av ligningen. 
+\end{losning}
+
+\begin{oppgave}
+En variant av Eulers formel kalles de Moivres formel
+\[
+(\cos x + i\sin x)^n=\cos nx + i\sin nx.
+\]
+\begin{punkt}
+Utled de Moivres formel.
+\end{punkt}
+
+\begin{punkt}
+Vis at $(\overline z)^n=\overline{z^n}$.
+\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+\[
+(\cos x + i\sin x)^n=(e^{ix})^n=e^{nx}=\cos nx + i\sin nx.
+\]
+\end{punkt}
+
+\begin{punkt}
+\[
+(\overline{z})^n=(re^{-i\theta})^n=r^ne^{-in\theta}=\overline{r^ne^{in\theta}}=\overline{z^n}
+\]
+%Skriv $z=re^{i\theta}$. Da har vi at $\overline{z}=re^{-i\theta}$. Vi regner litt på venstre side av likheten vi ønsker å vise:
+%\[
+%(\overline{z})^n=r^ne^{-nx}.
+%\]
+%Bruk del \textbf{a)} for å se at
+%\[
+%(\overline{z})^n=r^n(\cos(- nx) + i\sin(- nx)).
+%\]
+%Men cosinus er like og sinus er odde slik at
+%\[
+%(\overline{z})^n=r^n(\cos(nx) - i\sin( nx)).
+%\]
+%Nå regner vi litt på høyre siden:
+%\[
+%(\overline{z^n})=\overline{r^ne^{ni\theta}}.
+%\]
+%Euler gir:
+%\[
+%(\overline{z^n})=\overline{r^n\cos(nx) + ir^n\sin( nx)}
+%\]
+%som igjen gir
+%\[
+%(\overline{z^n})=r^n\cos(nx) - ir^n\sin( nx).
+%%\]
+%
+%%Dermed ser vi at høyre side er lik vesntre siden.
+%
+%
+%\noindent
+%Alternativ løsning: Du kan enkelt vise at $\overline{zw}=\bar{z}\bar{w}$ for to komplekse tall $z$ og~$w$. Dette gir umiddelbart resultatet for $n=2$ (ta $w=z$). La oss fortsette med induksjon. Anta at påstanden er sann for $z^{n}$. Da ser vi -- ta $w=z^n$ ovenfor -- at 
+%\[
+%\overline{z^{n+1}}=\overline{z^{n}}\overline{z}.
+%\]
+%Induksjonshypotesen er at 
+%\[
+%\overline{z^{n}}=\overline{z}^n.
+%\]
+%Sett inn for å se at
+%\[
+%\overline{z^{n+1}}=\overline{z}^{n+1}.
+%\]
+%Vi har dermed vist påstanden med induksjon.
+\end{punkt}
+\end{losning}
+
+
+\begin{oppgave}
+La $z$ og~$w$ være følgende komplekse tall:
+\[
+z = \frac{3\pi}{4} i
+\qquad\qquad
+w = -\frac{3\pi}{4}i
+\]
+\begin{punkt}
+% Skriv $e^{i\frac{3\pi}{4}}-e^{-i^\frac{3 \pi}{4}}$ på polarform.
+Skriv tallet $e^z - e^w$ på polar form.
+\end{punkt}
+
+\begin{punkt}
+% Skriv $\frac{e^{i\frac{3\pi}{4}}}{e^{-i^\frac{3 \pi}{4}}}$ på polarform.
+Skriv tallet $e^z/e^w$ på polar form.
+\end{punkt}
+
+\begin{punkt}
+Er det enkelt å dele komplekse tall på polar form?
+Hva med addere?
+Sammenlign med kartesisk form, altså $a + bi$.
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Euler gir: $e^{i\frac{3\pi}{4}}=\cos(\frac{3\pi}{4})+i\sin (\frac{3\pi}{4})$. Bruk at $\cos$ er en like funksjon og $\sin$ er en odde funksjon for å se at $e^{-i\frac{3\pi}{4}}=\cos(\frac{3\pi}{4})-i\sin (\frac{3\pi}{4})$. Nå kan vi regne ut at $$e^{i\frac{3\pi}{4}}-e^{-i\frac{3 \pi}{4}}=-2i\sin \frac{3\pi}{4}=\sqrt{2}e^{i\frac{3\pi}{2}}.$$
+\end{punkt}
+
+\begin{punkt}
+$\frac{e^{i\frac{3\pi}{4}}}{e^{-i\frac{3 \pi}{4}}}=e^{i(\frac{3\pi}{4}-(-\frac{3 \pi}{4}))}=e^{i\frac{3\pi}{2}}.$ 
+\end{punkt}
+
+\begin{punkt}
+Polar Form: Veldig enkelt å multiplisere/dividere som del $\textbf{b)}$ illustrerer; vanskelig å addere som del $\textbf{a)}$ illustrerer.
+
+\noindent
+Kartesisk: Her blir det motsatt: Enkelt å addere; vanskelig å dele.
+\end{punkt}
+
+\end{losning}
+
+
+
+\begin{oppgave}
+Røtter er sunt.
+\begin{punkt}
+Skriv det komplekse tallet $-1+i\sqrt{3}$ på polar form.
+\end{punkt}
+
+\begin{punkt}
+Vis at $-1+i\sqrt{3}$ er en sjetterot av 64.
+\end{punkt}
+
+\begin{punkt}
+Finn alle sjetterøttene til $64$. Skissér dem i det komplekse planet.
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+$2e^{\frac{2\pi i}{3}}$
+\end{punkt}
+
+\begin{punkt}
+$(-1+i\sqrt{3})^6=(2e^{\frac{2\pi i}{3}})^6=64e^{4\pi i}=64.$
+\end{punkt}
+
+\begin{punkt}
+$2,2e^{\frac{\pi i}{3}},2e^{\frac{2\pi i}{3}},-2,2e^{\frac{4\pi i}{3}},2e^{\frac{5\pi i}{3}}$
+
+
+\begin{center}`
+	\begin{tikzpicture}
+	\draw[->] (-3,0) -- (3,0) node[right] {$x$};
+	\draw[->] (0,-3) -- (0,3) node[above] {$y$};
+	
+	\node at (2,0) [] {$\boldsymbol{\cdot}$};
+	\node at (1,1.732) [] {$\boldsymbol{\cdot}$};
+	\node at (-1,1.732) [] {$\boldsymbol{\cdot}$};
+	\node at (-2,0) [] {$\boldsymbol{\cdot}$};
+	\node at (-1,-1.732) [] {$\boldsymbol{\cdot}$};
+	\node at (1,-1.732) [] {$\boldsymbol{\cdot}$};
+	
+	\end{tikzpicture}
+\end{center}
+
+
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+Jeg sa du skulle pugge binomialteoremet!
+\begin{punkt}
+Finn alle løsninger av likningen $$z^3-3z^2+3z-1=0.$$ Skissér løsningene i det komplekse planet.
+\end{punkt}
+\begin{punkt}
+Finn alle løsninger av likningen $$z^3-3z^2+3z-2=0$$ ved å bruke svaret du fant i $\textbf{a)}$. Skissér løsningene i det komplekse planet.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Vi har at $(z-1)^3=z^3-3z^2+3z-1$ slik at $z=1$ er en trippelrot.
+
+\noindent
+Aletrnativt kan du gjette på løsningen $z=1$ og deretter bruke polynomdivisjon.
+\end{punkt}
+
+\begin{punkt}
+
+
+Fra \textbf{a)} har vi at likningen kan skrives på formen $$(z-1)^3=1=e^{2\pi i}.$$ Tredjerøttene til $1$ er $$e^{\frac{2\pi}{3}}, \quad e^{\frac{4\pi}{3}},\quad 1.$$ Dermed har vi tre løsninger for $z-1$ som igjen gir tre løsninger for $z$: $$z=1+e^{\frac{2\pi}{3}},1+e^{\frac{4\pi}{3}},2.$$
+
+\noindent
+Tredjerøttene til $1$ ligger uniformt fordelt på sirekelen sentrert i origo med radius 1, men er forskjøvet til å ligge uniformt fordelt på sirkelen sentrert i $(1,0)$ med radius 1.
+
+
+\end{punkt}
+
+\end{losning}
+
+\begin{oppgave}
+Noen artige polygoner.
+\begin{punkt}
+Finn alle tredjerøttene til $1$. Tegn en rett linje fra løsning til løsning, etter økende vinkel.
+Hva slags geometrisk figur er dette?
+\end{punkt}
+
+\begin{punkt}
+Repeter del $\textbf{a)}$ for alle fjerderøttene til $1$.
+\end{punkt}
+
+
+\begin{punkt}
+Repeter del $\textbf{a)}$ for alle $n$-terøttene ($n\geq 3$) til $1$.
+\end{punkt}
+
+\begin{punkt}
+Får vi samme geometriske figur i $\textbf{c)}$ dersom vi bytter ut $1$ med et reelt tall $r \neq 0$?
+Hva med et generelt komplekst tall $w\neq 0$?
+\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+
+\begin{punkt}
+Vi følger den vanlige metoden for å finne $n$-terøtter: Skriv $1$ på polar form; $1=e^{(2\pi k )i}$, $k$ et heltall. Ta tredjeroten for å få $\sqrt[3]{1}=e^{(\frac{2\pi k}{3} )i}$, $k$ heltall. Dette gir ulike komplekse tall for $k=0,1,2$: 
+$$1,\quad e^{\frac{2\pi i}{3}}, \quad e^{\frac{4\pi i}{3}}.$$ 
+
+\noindent
+Dette er tre punkter uniformt fordelt på sirkelen sentrert i origo med radius 1. Dersom vi trekker rette linjer mellom punkter etter økende vinkel får vi en trekant med røttene som hjørner.
+\end{punkt}
+
+\begin{punkt}
+Som i $\textbf{a)}$ gir $$1,\quad i,\quad -1, \quad -i. $$ Den geometriske figuren blir en firkant med hjørner i røttene.
+\end{punkt}
+
+\begin{punkt}
+Som i $\textbf{a)}$ gir $$1,\quad e^{\frac{2\pi i}{n}},\quad e^{\frac{4\pi i}{n}},\dots,e^{\frac{(n-1)\pi i}{n}}.$$ Den geometriske figuren blir en $n$-kant med hjørner i røttene.
+\end{punkt}
+
+\begin{punkt}
+Vi får fortsatt en $n$-kant med hjørner i røttene.
+
+\noindent
+Forklaring: Et komplekst tall kan skrives på formen $re^{i\theta}$ hvor $r>0$ er et reelt tall. Nå blir $n$-terøttene $\sqrt[n]{r}e^{(\theta+\frac{2\pi k}{n})i}$, $k=0,1,\dots, n-1$ (en hel runde i det komplekse planet). Dette er en uniform fordeling av $n$ punkter på sirkelen sentrert i origo med radius $\sqrt[n]{r}$.
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+Vis at dersom koeffisentene $a_i$ i polynomligningen
+\[
+a_nz^n+a_{n-1}z^{n-1}+...+a_1z+a_0=0
+\]
+er reelle, kommer løsningene i konjugatpar, altså at dersom $w$ er en løsning, er også $\overline w$ en løsning.
+\end{oppgave}
+
+\begin{losning}
+Vi har at
+\[
+a_nw^n+a_{n-1}w^{n-1}+...+a_1w+a_0=0.
+\]
+Konjugering av hele ligningen gir 
+\[
+a_n(\overline w)^n+a_{n-1}(\overline w)^{n-1}+...+a_1(\overline w)+a_0=0,
+\]
+men tidligere har du vist at $(\overline w)^n=\overline {w^n}$, slik at 
+\[
+a_n\overline w^n+a_{n-1}\overline w^{n-1}+...+a_1\overline w+a_0=0.
+\]
+
+
+
+\end{losning}
+
+
+
+\begin{oppgave}
+La $z$ og $w$ være to komplekse tall, begge ulik null. Er det mulig at $zw=0$?
+\end{oppgave}
+
+\begin{losning}
+Nei.
+
+\noindent
+Løsning: Skriv tallene på polar form, $z=re^{i\theta}$ og $w=\rho e^{i\phi}$. Nå kan produktet uttrykkes $zw=r\rho e^{i(\theta+\phi)}$, hvor $r \rho>0$. Derfor er produktet forskjellig fra null.
+
+\noindent
+Alternativ løsning: Du kan også løse oppgaven ved å skrive $z$ og~$w$ på formen $a+ib$.
+\end{losning}
+
+
+
+\begin{oppgave}
+La $n>0$, og la $z$ være en $n$-terot av et reelt tall. Er $\bar{z}$ også en $n$-terot av dette tallet?
+\end{oppgave}
+
+\begin{losning}
+Ja. Se oppgave 5b.
+
+\end{losning}
+
+\begin{oppgave}
+Vis at $\mathbb C$ er et vektorrom.
+\end{oppgave}
+
+\begin{losning}
+Operasjonene $(a+ib)+(c+id)=(a+c)+i(b+d)$ og $r(a+ib)=(ra)+i(rb)$ er helt like som operasjonene på $\mathbb{R}^2$ dersom vi tenker på $a+ib$ som et punkt $(a,b)$ i planet. Dermed er $\mathbb{C}$ helt likt $\mathbb{R}^2$ (bortsett fra at vektorene ser litt annerledes ut).
+\end{losning}
+
+\begin{oppgave}
+Vis at vektorrommet som består av alle matriser på formen 
+\[
+\begin{pmatrix}
+a & b \\
+-b & a \\
+\end{pmatrix}
+\]
+er isomorft med $\mathbb C$. 
+\end{oppgave}
+
+\begin{losning}
+Definer følgende funksjoner 
+$$T(a+ib)=\begin{pmatrix}
+a & b \\
+-b & a \\
+\end{pmatrix}$$ og 
+$$S(\begin{pmatrix}
+a & b \\
+-b & a \\
+\end{pmatrix})=a+ib.$$ Du kan sjekke at $T$ og $S$ er lineære. Du kan også sjekke at $S$ og $T$ er inverser av hverandre; $$S(T(a+ib))=a+ib,$$ og $$T(S(\begin{pmatrix}
+a & b \\
+-b & a \\
+\end{pmatrix}))=\begin{pmatrix}
+a & b \\
+-b & a \\
+\end{pmatrix}.$$ Derfor er både $T$ og $S$ isomorfier mellom vektorrommene.
+\end{losning}
+
+
+%\begin{oppgave}
+%La $\V{u}=\vvv{2}{-5}{1}$ og la $T:\mathbb{R}^3\rightarrow \mathbb{R}^3$ være den ortogonale projeksjonen ned på underrommet utspent av $\V{u}$,
+%$$T(\V{x})=\frac{\V{x}\boldsymbol{\cdot} \V{u}}{\|\V{u} \|^2} \V{u}.$$
+%
+%\begin{punkt}
+%Bruk definisjonen av en lineærtransformasjon for å vise at $T$ er en lineærtransformasjon.
+%\end{punkt}
+%
+%\begin{punkt}
+%Finn matrisen $A$ slik at $T(\V{x})=A\V{x}$ for alle vektorer $\V{x}$.
+%\end{punkt}
+%
+%\end{oppgave}
+%
+%\begin{losning}
+%
+%\begin{punkt}
+%Dette følger av at prikkproduktet er lineært.
+%\end{punkt}
+%
+%\begin{punkt}
+%Bruk $T$ på standardbasisen til $\mathbb{R}^3$ for å se at
+%$$A=\frac{1}{30}\begin{bmatrix}
+%4 & -10 & 2\\
+%-10 & 25 & -5\\
+%2 & -5 & 1
+%\end{bmatrix}.$$
+%\end{punkt}
+%
+%\end{losning}

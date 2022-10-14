@@ -1,0 +1,1378 @@
+% -*- TeX-master: "oving10"; -*-
+\oppgaver{12}
+
+\begin{oppgave}
+Finn den adjungerte matrisen til
+\[
+\begin{bmatrix}
+ 1+i & 1-i\\
+ 2 & -i\\
+ 2-i & 1+i
+\end{bmatrix}
+\]
+\end{oppgave}
+
+
+\begin{losning}
+\[
+\begin{bmatrix}
+ 1-i & 2 & 2 + i \\
+ 1+i & i & 1-i
+\end{bmatrix}
+\]
+\end{losning}
+
+
+\begin{oppgave}
+La
+\[
+\V u= \vv{2}{-5} \quad \text{og} \quad \V v=\vv{1}{2}
+\]
+Finn vektorprojeksjonen av $\V u$ på $\V v$. Tegn $\V u$, $\V v$ og vektorprojeksjonen i samme koordinatsystem. 
+\end{oppgave}
+
+
+\begin{losning}
+Projeksjonen av $\u$ på~$\v$ er:
+\[
+\u_\v
+= \frac{\v^* \u}{\v^* \v} \v
+= \frac{1 \cdot 2 + 2 \cdot (-5)}{1^2 + 2^2} \vv{1}{2}
+%= \frac{-8}{5} \vv{1}{2}
+= \vv{-8/5}{-16/5}
+\]
+\begin{center}
+\begin{tikzpicture}[scale=.6]
+\draw[->] (-5.5,0) -- (5.5,0);
+\draw[->] (0,-5.3) -- (0,3.5);
+\foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5}
+\draw (\x,.1) -- (\x,-.1);% node[anchor=north] {$\x$};
+\foreach \y in {-5,-4,-3,-2,-1,1,2,3}
+\draw (.1,\y) -- (-.1,\y);% node[anchor=east] {$\y$};
+\draw[->] (0,0) -- (2,-5) node[anchor=west] {$\u$};
+\draw[->] (0,0) -- (1,2) node[anchor=west] {$\v$};
+\draw[->] (0,0) -- (-1.6,-3.2) node[anchor=north] {$\u_\v$};
+\end{tikzpicture}
+\end{center}
+\end{losning}
+
+
+\begin{oppgave}
+Hvilke matriser representerer projeksjoner?
+\\
+\noindent
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 2 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 0 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 0
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 1\\
+ 1 & 0
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\begin{minipage}{0.14\textwidth}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 1 & 0\\
+ 0 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\end{minipage}
+\end{oppgave}
+
+
+\begin{losning}
+For å finne ut om en matrise $P$ representerer en projeksjon, må vi
+sjekke om $P^2 = P$.
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 1
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 2 & 1
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 0 & 0\\
+ 2 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 0 & 1
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 0 & 0\\
+ 0 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 0
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 0 & 0\\
+ 0 & 0
+\end{bmatrix}
+\ne
+\begin{bmatrix}
+ 0 & 0\\
+ 1 & 0
+\end{bmatrix}
+$
+\end{punkt}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 0 & 1\\
+ 1 & 0
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 1 & 0\\
+ 0 & 1
+\end{bmatrix}
+\ne
+\begin{bmatrix}
+ 0 & 1\\
+ 1 & 0
+\end{bmatrix}
+$
+\end{punkt}
+\begin{punkt}
+$
+\begin{bmatrix}
+ 1 & 0\\
+ 0 & 1
+\end{bmatrix}
+^2
+=
+\begin{bmatrix}
+ 1 & 0\\
+ 0 & 1
+\end{bmatrix}
+$
+\end{punkt}
+\medskip
+\noindent
+Konklusjon: Matrisene i del~\textbf{a)}, \textbf{b)}, \textbf{c)}
+og~\textbf{f)} representerer projeksjoner; matrisene i del~\textbf{d)}
+og~\textbf{e)} representerer ikke projeksjoner.
+\end{losning}
+
+
+
+\begin{oppgave}
+Hvilke av vektorene er ortogonale med hverandre?
+\begin{punkt}
+$\vvv{2}{-5}{1}$ og $\vvv{1}{2}{0}$ \\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\vvv{1}{0}{-1}$, $\vvv{1}{\sqrt{2}}{1}$ og $\vvv{1}{-\sqrt{2}}{1}$ \\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\vvv{i}{0}{1}$, $\vvv{i}{1}{0}$ og $\vvv{1}{i}{i}$ \\[4pt]
+\end{punkt}
+
+%\begin{punkt}
+%$\vvv{1}{0}{0}$, $\vvv{1+i}{2+i}{3+i}$ og $\vvv{3+i}{2+i}{1+i}$ \\[4pt]
+%\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+Indreproduktet av de to vektorene er:
+\[
+\vvv{2}{-5}{1}^*
+\vvv{1}{2}{0}
+= 2 \cdot 1 + (-5) \cdot 2 + 1 \cdot 0 = -8
+\]
+Siden indreproduktet ikke er~$0$, er vektorene ikke ortogonale.
+\end{punkt}
+
+\begin{punkt}
+Vi ser på indreproduktet av hvert par av vektorer:
+\begin{align*}
+\vvv{1}{0}{-1}^* \vvv{1}{\sqrt{2}}{1}  &= 0 \\
+\vvv{1}{0}{-1}^* \vvv{1}{-\sqrt{2}}{1} &= 0 \\
+\vvv{1}{\sqrt{2}}{1}^* \vvv{1}{-\sqrt{2}}{1} &= 0
+\end{align*}
+Alle de tre vektorene er ortogonale til hverandre.
+\end{punkt}
+
+\begin{punkt}
+Vi ser på indreproduktet av hvert par av vektorer:
+\begin{align*}
+\vvv{i}{0}{1}^* \vvv{i}{1}{0}
+&= \begin{bmatrix} -i & 0 & 1 \end{bmatrix} \vvv{i}{1}{0}
+ = 1 \\
+\vvv{i}{0}{1}^* \vvv{1}{i}{i}
+&= \begin{bmatrix} -i & 0 & 1 \end{bmatrix} \vvv{1}{i}{i}
+ = 0 \\
+\vvv{i}{1}{0}^* \vvv{1}{i}{i}
+&= \begin{bmatrix} -i & 1 & 0 \end{bmatrix} \vvv{1}{i}{i}
+ = 0
+\end{align*}
+Vektorene $(i,0,1)$ og $(i,1,0)$ er altså ikke ortogonale,
+men vektoren $(1,i,i)$ er ortogonal til hver av de to andre.
+\end{punkt}
+
+% \begin{punkt}
+% Vi ser på indreproduktet av hvert par av vektorer:
+% \begin{align*}
+% \vvv{1}{0}{0}^* \vvv{1+i}{2+i}{3+i} &= 1 + i \\
+% \vvv{1}{0}{0}^* \vvv{3+i}{2+i}{1+i} &= 3 + i \\
+% \vvv{1+i}{2+i}{3+i}^* \vvv{3+i}{2+i}{1+i} &= 11 + 12i
+% \end{align*}
+% Ingen av de tre vektorene er ortogonale til hverandre.
+% \end{punkt}
+\end{losning}
+
+
+\begin{oppgave}
+Beregn $P_{\V u}$, $I-P_{\V u}$, $P_{\V u}\V v$ og $\V v-P_{\V u}\V v$ når \\[2pt]
+\begin{punkt}
+$\V{u}=\vvv{2}{-5}{1}$ og $\V{v}=\vvv{1}{2}{0}$\\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\V{u}=\vvv{1}{0}{-1}$ og $\V{v}=\vvv{1}{\sqrt{2}}{1}$\\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\V{u}=\vvv{i}{0}{1}$ og $\V{v}=\vvv{i}{1}{0}$\\[4pt]
+\end{punkt}
+
+%\begin{punkt}
+%$\V{u}=\vvv{1+i}{2+i}{3+i}$ og $\V{v}=\vvv{3+i}{2+i}{1+i}$
+%\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+Vi får:
+\begin{align*}
+P_{\u}
+&= \frac{1}{\u^* \u} \cdot (\u \u^*) \\
+&= \frac{1}{2^2 + (-5)^2 + 1^2}
+\begin{bmatrix}
+ 2 \cdot 2 &  2 \cdot (-5) &  2 \cdot 1 \\
+-5 \cdot 2 & -5 \cdot (-5) & -5 \cdot 1 \\
+ 1 \cdot 2 &  1 \cdot (-5) &  1 \cdot 1
+\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+2/15 & -1/3 & 1/15 \\
+-1/3 &  5/6 & -1/6 \\
+1/15 & -1/6 & 1/30
+\end{bmatrix}
+\\
+P_{\u^\perp}
+&= I_3 - P_\u
+=
+\begin{bmatrix}
+13/15 & 1/3 & -1/15 \\
+ 1/3  & 1/6 &  1/6  \\
+-1/15 & 1/6 & 29/30
+\end{bmatrix}
+\\
+P_\u \v
+&=
+\begin{bmatrix}
+13/15 & 1/3 & -1/15 \\
+ 1/3  & 1/6 &  1/6  \\
+-1/15 & 1/6 & 29/30
+\end{bmatrix}
+\vvv{1}{2}{0}
+= \vvv{-8/15}{4/3}{-4/15}
+\\
+P_{\u^\perp} \v
+&=
+\begin{bmatrix}
+13/15 & 4/3 & 14/15 \\
+ 4/3  & 1/6 &  7/6  \\
+14/15 & 7/6 & 29/30
+\end{bmatrix}
+\vvv{1}{2}{0}
+= \vvv{23/15}{2/3}{4/15}
+\end{align*}
+\end{punkt}
+
+\noindent
+I de neste delene viser vi ikke all mellomregningen, men bare
+resultatene.
+
+\begin{punkt}
+\vspace{-15pt}
+\begin{align*}
+P_\u
+&=
+\begin{bmatrix}
+ 1/2 & 0 & -1/2 \\
+ 0   & 0 & 0    \\
+-1/2 & 0 &  1/2
+\end{bmatrix}
+&
+P_\u \v &= \0
+\\
+P_{\u^\perp}
+&=
+\begin{bmatrix}
+1/2 & 0 & 1/2 \\
+0   & 1 & 0    \\
+1/2 & 0 & 1/2
+\end{bmatrix}
+&
+P_{\u^\perp} \v &= \v
+\end{align*}
+\end{punkt}
+
+\begin{punkt}
+$\V{u}=\vvv{i}{0}{1}$ og $\V{v}=\vvv{i}{1}{0}$\\[4pt]
+\vspace{-15pt}
+\begin{align*}
+P_\u
+&=
+\begin{bmatrix}
+1/2  & 0 & i/2 \\
+0    & 0 & 0   \\
+-i/2 & 0 & 1/2
+\end{bmatrix}
+&
+P_\u \v &= \vvv{i/2}{0}{1/2}
+\\
+P_{\u^\perp}
+&=
+\begin{bmatrix}
+1/2  & 0 & -i/2 \\
+0    & 1 & 0    \\
+i/2  & 0 & 1/2
+\end{bmatrix}
+&
+P_{\u^\perp} \v &= \vvv{i/2}{1}{-1/2}
+\end{align*}
+\end{punkt}
+\end{losning}
+
+
+\begin{oppgave}
+Vis at vektorene 
+\[
+\vvv{1}{-1}{1}, \quad \vvv{1}{2}{1} \text{og} \quad \vvv{-1}{0}{1}
+\]
+utgjør en ortogonal basis for $\R^3$, og finn koordinatene til punktet
+\[
+\vvv{1}{1}{1}
+\]
+i denne basisen.
+\end{oppgave}
+
+
+\begin{losning}
+Vi kan sjekke at vektorene
+\[
+\b_1 = \vvv{1}{-1}{1}, \quad \b_2 = \vvv{1}{2}{1} \quad \text{og} \quad \b_3 = \vvv{-1}{0}{1}
+\]
+er lineært uavhengige på vanlig måte
+(kombiner dem til en matrise, gausseliminer og sjekk at det blir
+pivotelementer i alle kolonner).  Det betyr at de utgjør en basis
+for~$\R^3$.  Videre sjekker vi at de er en ortogonal basis ved å
+sjekke at hver av dem er ortogonal til begge de andre.
+
+Når vi vet at vi har en ortogonal basis, kan vi finne koordinatene til
+en vektor med hensyn på basisen ved å projisere vektoren ortogonalt på
+hver basisvektor:
+\begin{align*}
+P_{\b_1} \vvv{1}{1}{1} &= \frac{1}{3} \b_1 \\
+P_{\b_2} \vvv{1}{1}{1} &= \frac{2}{3} \b_2 \\
+P_{\b_3} \vvv{1}{1}{1} &= 0 \b_3
+\end{align*}
+Koeffisientene til vektoren~$(1,1,1)$ med hensyn på
+basisen~$(\b_1,\b_2,\b_3)$ er altså $(1/3,2/3,0)$.
+\end{losning}
+
+
+% TODO: denne løsningen har kommet bort fra oppgaven sin
+% \begin{losning}
+% \begin{punkt}
+% Hint: Prikkproduktet er lineært.
+% \end{punkt}
+%
+% \begin{punkt}
+% Bruk $T$ på standardbasisen til $\mathbb{R}^3$ for å se at
+% $$A=\frac{1}{30}\begin{bmatrix}
+% 4 & -10 & 2\\
+% -10 & 25 & -5\\
+% 2 & -5 & 1
+% \end{bmatrix}.$$
+% \end{punkt}
+%
+% \begin{punkt}
+% Bildet er linjen utspent av $\V{u}$. Kjernen er alt som sendes til null når vi prikker med $\V{u}$, dvs. det ortogonale komplementet. Fra dette ser vi at $T$ ikke er surjektiv eller injektiv.
+% \end{punkt}
+%
+% \begin{punkt}
+% Hint: En vektor $\V{x}$ kan skrives som en entydig sum $\V{x}=\text{proj}_{\V{u}^{\perp}}\V{x}+\text{proj}_{\V{u}}\V{x}$, hvor siste ledd er $T(\V{x})$ fra \textbf{a)}. Dermed blir projeksjonen ned på det ortogonale komplementet
+% $$\text{proj}_{\V{u}^{\perp}}\V{x}=\V{x}-T(\V{x}).$$ Nå gjør vi som i løsningen til $\textbf{b)}$: sett inn for $\V{x}=\V{e}_i$, $i=1,2,3$, og bruk dette som kolonnevektorer.
+% \end{punkt}
+% \end{losning}
+
+\ifx\inkludert\undefined
+\ifthenelse{\boolean{vis-oppgaver}}{\newpage}{}
+\fi
+
+\begin{oppgave}
+Finn en ortonormal basis for rommet utspent av% \\[2pt]
+\begin{punkt}
+$\vvv{2}{-5}{1}$ og $\vvv{1}{2}{0}$ \\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\vvv{1}{0}{-1}$, $\vvv{1}{\sqrt{2}}{1}$ og $\vvv{1}{-\sqrt{2}}{1}$\\[4pt]
+\end{punkt}
+
+\begin{punkt}
+$\vvv{i}{0}{1}$, $\vvv{i}{1}{0}$ og $\vvv{1}{i}{i}$\\[4pt]
+\end{punkt}
+
+%\begin{punkt}
+%$\vvv{1}{0}{0}$, $\vvv{1+i}{2+i}{3+i}$ og $\vvv{3+i}{2+i}{1+i}$\\[4pt]
+%\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+Vi bruker Gram--Schmidt-ortogonalisering, og får:
+\begin{align*}
+\u_1 &= \vvv{2}{-5}{1} \\
+\u_2 &= \vvv{1}{2}{0} - P_{\u_1} \vvv{1}{2}{0}
+%      = \vvv{1}{2}{0} - \frac{\vvv{1}{2}{0}^* \vvv{1}{2}{0}}{\vvv{1}{2}{0}^* \vvv{1}{2}{0}} \vvv{2}{-5}{1}
+      = \vvv{23/15}{2/3}{4/15}
+\end{align*}
+Da er $(\u_1,\u_2)$ en ortogonal basis.  Vi finner en ortonormal basis
+ved å dele hver basisvektor på lengden sin:
+\begin{align*}
+\hat\u_1
+&= \frac{1}{\|\u_1\|} \u_1
+ = \frac{1}{\sqrt{30}} \u_1
+ = \vvv{2/\sqrt{30}}{-5/\sqrt{30}}{1/\sqrt{30}} \\
+\hat\u_2
+&= \frac{1}{\|\u_2\|} \u_2
+ = \frac{\sqrt{15}}{\sqrt{43}} \u_2
+ = \vvv{23 \sqrt{15} / 15 \sqrt{43}}{2 \sqrt{15} / 3 \sqrt{43}}{4 \sqrt{15} / 15 \sqrt{43}}
+% = \vvv{23/\sqrt{645}}{2\sqrt{5}/\sqrt{129}}{4/\sqrt{645}}
+\end{align*}
+Da er $(\hat\u_1, \hat\u_2)$ en ortonormal basis.
+\end{punkt}
+
+\begin{punkt}
+Vektorene
+\[
+\vvv{1}{0}{-1},\quad
+\vvv{1}{\sqrt{2}}{1},\quad
+\vvv{1}{-\sqrt{2}}{1}
+\]
+er allerede ortogonale, så det eneste som gjenstår er å normalisere
+dem.  Vi deler hver vektor på lengden sin og får:
+\begin{align*}
+\hat\u_1 &= \vvv{1/\sqrt{2}}{0}{-1/\sqrt{2}} \\
+\hat\u_2 &= \vvv{1/2}{\sqrt{2}/2}{1/2} \\
+\hat\u_3 &= \vvv{1/2}{-\sqrt{2}/2}{1/2}
+\end{align*}
+Da er $(\hat\u_1, \hat\u_2, \hat\u_3)$ en ortonormal basis.
+\end{punkt}
+
+\begin{punkt}
+Vi husker at vi så de samme vektorene i oppgave~12.4. % TODO ordentlig referanse
+Da fant vi ut at vektoren $(1,i,i)$ er ortogonal til hver av de to andre.
+Det betyr at vi kan starte med å sette:
+\begin{align*}
+\u_1 &= \vvv{1}{i}{i} \\
+\u_2 &= \vvv{i}{1}{0}
+\end{align*}
+Da er $\u_1$ og~$\u_2$ ortogonale til hverandre, og vi må bare
+gjøre $(i,0,1)$ ortogonal til begge disse.  Vi setter:
+\[
+\u_3
+ = \vvv{i}{0}{1} - P_{\u_1} \vvv{i}{0}{1} - P_{\u_2} \vvv{i}{0}{1}
+ = \vvv{i/2}{-1/2}{1}
+\]
+Da er $(\u_1, \u_2, \u_3)$ en ortogonal basis.  Vi normaliserer:
+\begin{align*}
+\hat\u_1 &= \vvv{1/\sqrt{3}}{i/\sqrt{3}}{i/\sqrt{3}} \\
+\hat\u_2 &= \vvv{i/\sqrt{2}}{1/\sqrt{2}}{0} \\
+\hat\u_3 &= \vvv{i/\sqrt{6}}{-1/\sqrt{6}}{\sqrt{2}/\sqrt{3}}
+\end{align*}
+Da er $(\hat\u_1, \hat\u_2, \hat\u_3)$ en ortonormal basis.
+\end{punkt}
+\end{losning}
+
+
+\begin{oppgave}
+Finn vektoren 
+\[
+\vvv{i}{2+i}{1}
+\]
+sin komponent i rommet utspent av vektorene 
+\[
+\vvv{2}{-5}{1}\quad  \text{og} \quad \vvv{1}{2}{0}.
+\]
+\end{oppgave}
+
+
+\begin{losning}
+Vi bruker den ortogonale basisen $(\u_1, \u_2)$ som vi fant i oppgave~12.7~a),
+og projiserer vektoren $(i,2+i,1)$ ned på hver basisvektor.
+Da får vi følgende vektor:
+\begin{align*}
+&\!\!\!\!\!\!\!\!\!\!\!\!
+P_{\u_1} \vvv{i}{2+i}{1} +
+P_{\u_2} \vvv{i}{2+i}{1}
+% 1/30 * ...
+%   4i - 10(2+i) + 2 = -18 - 6i -> -3/5 - i/5
+%   -10i + 25(2+i) - 5 = 45 + 15i -> 3/2 + i/2
+%   2i - 5(2+i) + 1 = -9 - 3i -> -3/10 - i/10
+% +
+% 1/645 * ...
+%   529i + 230(2+i) + 92 = 552 + 759i -> 184/215 + 253i/215
+%   230i + 100(2+i) + 40 = 240 + 330i -> 16/43 + 22i/43
+%   92i + 40(2+i) + 16   = 96 + 132i  -> 32/215 + 44i/215
+\\
+&= \vvv{-3/5 - i/5}{3/2 + i/2}{-3/10 - i/10} +
+   \vvv{184/215 + 253i/215}{16/43 + 22i/43}{32/215 + 44i/215}
+\\
+&= \vvv{11/43 + 42i/43}{161/86 + 87i/86}{-13/86 + 9/86}
+\end{align*}
+\end{losning}
+
+
+\begin{oppgave}
+Bruk minste kvadraters metode på det overbestemte systemet \\
+%\noindent
+%\begin{minipage}{0.26\textwidth}
+%\begin{punkt}
+\textbf{a)}
+$
+\begin{amatrix}{2}
+2 & 1 & -1 \\
+-3 & 1 & -2 \\
+ -1 & 1  & 1
+\end{amatrix}
+$
+%\end{punkt}
+%\end{minipage}
+%\begin{minipage}{0.2\textwidth}
+%\begin{punkt}
+\hfill\textbf{b)}
+$
+\begin{amatrix}{3}
+0 & 1 & 1  & 1-i\\
+i & i & -1 & 1+i\\
+ 0 & i  & 0 & i\\
+  0 & i  & 1 & 1
+\end{amatrix}
+$
+%\end{punkt}
+%\end{minipage}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+La
+\[
+A =
+\begin{bmatrix}
+ 2 & 1 \\
+-3 & 1 \\
+-1 & 1
+\end{bmatrix}
+\qquad\text{og}\qquad
+\b = \vvv{-1}{-2}{1}
+\]
+være koeffisientmatrisen og høyresiden i likningssystemet vårt.  Vi
+ganger hver av disse med den adjungerte av~$A$ på venstre side, og
+får:
+\begin{align*}
+A^* A &=
+\begin{bmatrix}
+2 & -3 & -1 \\
+1 &  1 &  1
+\end{bmatrix}
+\begin{bmatrix}
+ 2 & 1 \\
+-3 & 1 \\
+-1 & 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+14 & -2 \\
+-2 &  3
+\end{bmatrix}
+\\
+A^* \b &=
+\begin{bmatrix}
+2 & -3 & -1 \\
+1 &  1 &  1
+\end{bmatrix}
+\vvv{-1}{-2}{1}
+=
+\vv{3}{-2}
+\end{align*}
+Vi må løse likningssystemet
+\[
+A^* A \x = A^* \b.
+\]
+Dette systemet har følgende totalmatrise:
+\[
+\begin{amatrix}{2}
+14 & -2 &  3 \\
+-2 &  3 & -2
+\end{amatrix}
+\]
+Når vi gausseliminerer denne, får vi:
+%  0  19  -11
+% -2   3   -2
+% -
+% -2   3   -2
+%  0   1  -11/19
+% -
+% -2   0   -5/19
+%  0   1  -11/19
+% -
+%  1   0    5/38
+%  0   1  -11/19
+\[
+\begin{amatrix}{2}
+1 & 0 &   5/38 \\
+0 & 1 & -11/19
+\end{amatrix}
+\]
+Minste kvadraters metode gir altså løsningen
+\[
+\vv{5/38}{-11/19}.
+\]
+\end{punkt}
+
+\begin{punkt}
+La
+\[
+A =
+\begin{bmatrix}
+0 & 1 &  1 \\
+i & i & -1 \\
+0 & i &  0 \\
+0 & i &  1
+\end{bmatrix}
+\qquad\text{og}\qquad
+\b = \vvvv{1-i}{1+i}{i}{1}
+\]
+være koeffisientmatrisen og høyresiden.  Vi får:
+\begin{align*}
+A^* A &=
+\begin{bmatrix}
+ 0 & -i &  0 &  0 \\
+-i & -i & -i & -i \\
+ 1 & -1 &  0 &  1
+\end{bmatrix}
+\begin{bmatrix}
+0 & 1 &  1 \\
+i & i & -1 \\
+0 & i &  0 \\
+0 & i &  1
+\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+ 1 & 1 &  i \\
+ 1 & 4 & -i \\
+-i & i &  3
+\end{bmatrix}
+\\
+A^* \b &=
+\begin{bmatrix}
+ 0 & -i &  0 &  0 \\
+-i & -i & -i & -i \\
+ 1 & -1 &  0 &  1
+\end{bmatrix}
+\vvvv{1-i}{1+i}{i}{1}
+\\
+&=
+\vvv{1-i}{1-3i}{1-2i}
+\end{align*}
+Det betyr at systemet
+\[
+A^* A \x = A^* \b
+\]
+har følgende totalmatrise:
+\[
+\begin{amatrix}{3}
+ 1 & 1 &  i & 1-i  \\
+ 1 & 4 & -i & 1-3i \\
+-i & i &  3 & 1-2i
+\end{amatrix}
+\]
+Vi gausseliminerer og får:
+%  1  1   i   1-i
+%  1  4  -i   1-3i
+% -i  i   3   1-2i
+%-
+%  1   1    i   1-i
+%  0   3  -2i   -2i
+%  0  2i    2   2-i
+%-
+%  1   1    i     1-i
+%  0   1  -2i/3   -2i/3
+%  0  2i    2     2-i
+%-
+%  1   1    i     1-i
+%  0   1  -2i/3   -2i/3
+%  0   0    2/3   2/3-i
+%-
+%  1   1    i     1-i
+%  0   1  -2i/3   -2i/3
+%  0   0    1     -3i/2
+%-
+%  1   1    i     1-i
+%  0   1    0    1-2i/3
+%  0   0    1     -3i/2
+%-
+%  1   0    i      -i/3
+%  0   1    0    1-2i/3
+%  0   0    1     -3i/2
+%-
+%  1   0    0      -3/2 - i/3
+%  0   1    0    1-2i/3
+%  0   0    1     -3i/2
+\[
+\begin{amatrix}{3}
+1 & 0 & 0 & -3/2 - i/3 \\
+0 & 1 & 0 & 1-2i/3 \\
+0 & 0 & 1 & -3i/2
+\end{amatrix}
+\]
+Minste kvadraters metode gir altså løsningen
+\[
+\vvv{-3/2 - i/3}{1-2i/3}{-3i/2}.
+\]
+\end{punkt}
+\end{losning}
+
+
+
+% \begin{losning}
+
+% \begin{punkt}
+% Det er flere løsninger. Du kan sjekke at svaret ditt i) ligger i spanet til $\V{u}$ og~$\V{v}$, ii) er ortogonale (prikkprodukt lik null) og iii) er normalisert (har lengde lik en). Alle svar som tilfredstiller i)-iii) er korrekt.
+% \end{punkt}
+% \begin{punkt}
+% Vektorrommet $V$ er et plan i $\mathbb{R}^3$. Vektorene $\V{u}$ og $\V{v}$ ligger i planet og peker i ulike retninger (er lineært uavhengige). Vektorene du fant i $\textbf{a)}$ vil også ligge i $V$, men ha lik lengde og 90 grader mellom hverandre.
+% \end{punkt}
+
+% \end{losning}
+
+% \begin{losning}
+% \end{losning}
+
+%\begin{oppgave}
+%Gi en forklaring på hvorfor minste kvadraters metode er en applikasjon av ortogonale projeksjoner.
+%\end{oppgave}
+%
+%\begin{losning}
+%Vi formulerer problemet vi ønsker å løse som en likning $A\V{x}=\V{b}$. Det er ikke sikkert denne likningen har en løsning. Derfor tar vi den ortogonale projeksjonen av $\V{b}$ ned på kolonnerommet til $A$, $\text{proj}_{\Col A}\V{b}$. Dette er den vektoren som er nærmest $\V{b}$ i $\Col A$, og vi finner derfor den beste approksimasjonen ved å løse likningen $A\V{x}=\text{proj}_{\Col A}\V{b}$. Merk at denne likningen har løsning!
+%\end{losning}
+
+\begin{oppgave}
+Vi skal finne polynomer som passer til punktene
+$$\vv{0}{1}, \vv{1}{2}, \vv{2}{3},\vv{3}{5},\vv{4}{7}.$$
+
+\begin{punkt}
+Det finnes et entydig fjerdegradspolynom  som går gjennom alle punktene. Sett opp et ligningssystem for koeffisientene til dette polynomet. 
+\end{punkt}
+
+\begin{punkt}
+Det finnes ingen annengradspolynomer som reiser gjennom alle punktene. Bruk minste kvadraters metode til å finne koeffisientene til det annengradspolynomet som passer best.
+\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+Vi vil finne et fjerdegradspolynom
+\[
+p(x) = a_4 x^4 + a_3 x^3 + a_2 x^2 + a_1 x + a_0
+\]
+som oppfyller:
+\begin{align*}
+p(0) &= 1 &
+p(3) &= 5 \\
+p(1) &= 2 &
+p(4) &= 7 \\
+p(2) &= 3
+\end{align*}
+Det betyr at koeffisientene $a_4$, $a_3$, \ldots, $a_0$ må oppfylle
+følgende likninger:
+\[
+\systeme[a_4a_3a_2a_1a_0]{
+a_0 = 1,
+a_4 + a_3 + a_2 + a_1 + a_0 = 2,
+16 a_4 + 8 a_3 + 4 a_2 + 2 a_1 + a_0 = 3,
+81 a_4 + 27 a_3 + 9 a_2 + 3 a_1 + a_0 = 5,
+256 a_4 + 64 a_3 + 16 a_2 + 4 a_1 + a_0 = 7
+}
+\]
+\end{punkt}
+
+\begin{punkt}
+Hvis det fantes et annengradspolynom
+\[
+p(x) = a_2 x^2 + a_1 x + a_0
+\]
+som gikk gjennom alle punktene, ville koeffisientene oppfylt følgende
+likningssystem:
+\[
+\systeme[a_2a_1a_0]{
+a_0 = 1,
+a_2 + a_1 + a_0 = 2,
+4 a_2 + 2 a_1 + a_0 = 3,
+9 a_2 + 3 a_1 + a_0 = 5,
+16 a_2 + 4 a_1 + a_0 = 7
+}
+\]
+Vi bruker minste kvadraters metode på dette systemet.
+La
+\[
+A =
+\begin{bmatrix}
+ 0 & 0 & 1 \\
+ 1 & 1 & 1 \\
+ 4 & 2 & 1 \\
+ 9 & 3 & 1 \\
+16 & 4 & 1
+\end{bmatrix}
+\qquad\text{og}\qquad
+\b = \vvvvv{1}{2}{3}{5}{7}
+\]
+være koeffisientmatrisen og høyresiden.  Vi får:
+\begin{align*}
+A^* A &=
+\begin{bmatrix}
+354 & 100 & 30 \\
+100 &  30 & 10 \\
+ 30 &  10 &  5
+\end{bmatrix}
+\\
+A^* \b &= \vvv{171}{51}{18}
+\end{align*}
+Løsningen av likningssystemet $A^* A \x = A^* \b$ blir:
+\[
+\x = \vvv{3/14}{9/14}{36/35}
+\]
+Annengradspolynomet som passer best til punktene er altså:
+\[
+p(x) = \frac{3}{14} x^2 + \frac{9}{14} x + \frac{36}{35}
+\]
+\end{punkt}
+\end{losning}
+
+
+% \begin{losning}
+% \begin{punkt}
+% $
+% \begin{bmatrix}
+% 0 & 0 & 1\\
+% 1 & 1 & 1\\
+% 4 & 2 & 1\\
+% 9 & 3 & 1\\
+% 16 & 4 & 1
+% \end{bmatrix}\vvv{a}{b}{c}=\begin{bmatrix}
+% 1\\
+% 2\\
+% 3\\
+% 5\\
+% 7
+% \end{bmatrix}$
+% \end{punkt}
+
+% \begin{punkt}
+% $a=\frac{3}{14}$, $b=\frac{9}{14}$ og $c=\frac{36}{35}$.
+% \end{punkt}
+
+% \begin{punkt}
+% Nei.
+% \end{punkt}
+
+% \end{losning}
+
+
+\begin{oppgave}
+Nå skal vi finne polynomer som passer til datasettet 
+$$\vv{0}{1}, \vv{1}{2}, \vv{2}{9},\vv{3}{28},\vv{4}{65}.$$ 
+\begin{punkt}
+Finn polynomet $p(x)=ax^3+bx^2+cx+d$ med best tilpasning.
+\end{punkt}
+
+\begin{punkt}
+Ser du noe artig?
+\end{punkt}
+\end{oppgave}
+
+
+\begin{losning}
+\begin{punkt}
+%Finn polynomet $p(x)=ax^3+bx^2+cx+d$ med best tilpasning.
+Vi bruker minste kvadraters metode på likningssystemet
+\[
+\systeme{
+d = 1,
+a + b + c + d = 2,
+8 a + 4 b + 2 c + d = 9,
+27 a + 9 b + 3 c + d = 28,
+64 a + 16 b + 4 c + d = 65
+}
+\]
+og får løsningen
+\[
+\vvvv{a}{b}{c}{d} = \vvvv{1}{0}{0}{1}
+\]
+Polynomet som passer best til punktene er altså:
+\[
+p(x) = x^3 + 1
+\]
+\end{punkt}
+
+\begin{punkt}
+%Ser du noe artig?
+Polynomet $p$ som vi fant i del~a) passer faktisk eksakt til punktene.
+\end{punkt}
+\end{losning}
+
+
+
+% \begin{losning}
+
+% \begin{punkt}
+% $
+% \begin{bmatrix}
+% 0 & 0 & 0 & 1\\
+% 1 & 1 & 1 & 1\\
+% 8 & 4 & 2 & 1\\
+% 27 & 9 & 3 & 1\\
+% 64 & 16 & 4 & 1
+% \end{bmatrix}\begin{bmatrix}
+% a\\
+% b\\
+% c\\
+% d
+% \end{bmatrix}=\begin{bmatrix}
+% 0\\
+% 2\\
+% 9\\
+% 28\\
+% 65
+% \end{bmatrix}$
+% \end{punkt}
+
+% \begin{punkt}
+% Polynomet $x^3+1$ går gjennom punktene. Derfor er en løsning $a=1$, $b=0$, $c=0$ og~$d=1$.
+% \end{punkt}
+
+% \begin{punkt}
+% Ja.
+% \end{punkt}
+
+% \end{losning}
+
+
+%\begin{oppgave}
+%Er minste kvadraters løsning til et system $A\V{x}=\V{b}$ entydig?
+%\end{oppgave}
+%
+%\begin{losning}
+%Nei, ikke generelt.
+%
+%\noindent
+%Forklaring: Kolonnene til $A\tr A$ kan være lineært avhengige slik at $A\tr A \V{x}=A\tr \V{b}$ ikke har entydig løsning. Prøv gjerne å finne et eksempel!
+%\end{losning}
+
+
+\begin{oppgave}
+Anta at $\V{u}_1$, \ldots, $\V{u}_n$ er en ortonormal basis for $\mathbb{R}^n$. Vis at den inverse matrisen til $A=\begin{bmatrix}
+\V{u}_1 & \cdots & \V{u_n}
+\end{bmatrix}$ er gitt ved $A^{-1}=A\tr$.
+\end{oppgave}
+
+
+\begin{losning}
+Siden $(\u_1, \u_2, \ldots, \u_n)$ er en ortonormal basis,
+har vi
+\begin{align*}
+\u_k\tr \u_k &= 1
+\ \ \text{for hver $k$, og} \\
+\u_k\tr \u_l &= 0
+\ \ \text{for $k \ne l$.}
+\end{align*}
+Det vil si at
+\begin{align*}
+A\tr A
+&=
+\begin{bmatrix}
+\u_1\tr \\ \u_2\tr \\ \vdots \\ \u_n\tr
+\end{bmatrix}
+\begin{bmatrix}
+\u_1 & \u_2 & \cdots & \u_n
+\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+\u_1\tr \u_1 & \u_1\tr \u_2 & \u_1\tr \u_3 & \cdots & \u_1\tr \u_n \\
+\u_2\tr \u_1 & \u_2\tr \u_2 & \u_2\tr \u_3 & \cdots & \u_2\tr \u_n \\
+\u_3\tr \u_1 & \u_3\tr \u_2 & \u_3\tr \u_3 & \cdots & \u_3\tr \u_n \\
+\vdots       & \vdots       & \vdots       & \ddots & \vdots       \\
+\u_n\tr \u_1 & \u_n\tr \u_2 & \u_n\tr \u_3 & \cdots & \u_n\tr \u_n
+\end{bmatrix}
+\\
+&=
+\begin{bmatrix}
+1 & 0 & 0 & \cdots & 0 \\
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & 1
+\end{bmatrix}
+\\
+&= I_n
+\end{align*}
+Dette vil si at $A\tr$ er inversen til~$A$.
+
+(Hvorfor holdt det å regne ut $A\tr A$?  Må vi ikke også sjekke at
+$A A\tr$ blir~$I_n$?  Husk at vi i slutten av kapittel~4 viste at
+dersom $AB = I_n$ for to $n \times n$-matriser $A$ og~$B$, så er også
+$BA = I_n$.  Så når vi har sjekket at $A\tr A = I_n$, så følger det at
+$A A\tr$ også må være $I_n$.)
+\end{losning}
+
+
+\begin{oppgave}
+Vis at en samling vektorer som er parvis ortogonale, og forskjellige fra null, er lineært uavhengige.
+\end{oppgave}
+
+
+\begin{losning}
+La $\v_1$, $\v_2$, \ldots, $\v_n$ være en samling med vektorer som er
+parvis ortogonale.  Da har vi
+\[
+\v_k^* \v_l = 0
+\]
+for alle $k$ og~$l$ slik at $k \ne l$.
+
+Vi vil vise at vektorene er lineært uavhengige, så vi ser på likningen
+\[
+\v_1 x_1 + \v_2 x_2 + \cdots + \v_n x_n = 0.
+\]
+Hvis vi ganger denne til venstre med $\v_1^*$, får vi:
+\[
+\v_1^* \v_1 x_1 + \v_1^* \v_2 x_2 + \cdots + \v_1^* \v_n x_n = 0,
+\]
+som vi kan forenkle til
+\[
+\|\v_1\|^2 x_1 = 0.
+\]
+Siden $\v_1$ ikke er nullvektoren, er lengden $\|\v_1\|$ ulik~$0$, så
+dette betyr at
+\[
+x_1 = 0.
+\]
+På samme måte kan vi gange likningen med $\v_2^*$, og $\v_3^*$, og så
+videre, og da får vi
+\[
+x_2 = 0,\quad
+x_3 = 0,\quad\ldots,\quad
+x_n = 0.
+\]
+Det vil si at eneste løsning av likningen
+\[
+\v_1 x_1 + \v_2 x_2 + \cdots + \v_n x_n = 0.
+\]
+er den trivielle løsningen, og dermed er vektorene
+\[
+\v_1,\ \v_2,\ \ldots,\ \v_n
+\]
+lineært uavhengige.
+\end{losning}
+
+
+\begin{oppgave}
+Vis at $\V v^* \V w=\overline{\V w^* \V v}$.
+\end{oppgave}
+
+
+\begin{losning}
+La $\v$ og~$\w$ være to vilkårlige vektorer i~$\C^n$:
+\[
+\v = \vn{v}{n}
+\quad\text{og}\quad
+\w = \vn{w}{n}
+\]
+Da har vi:
+\begin{align*}
+\v^* \w
+&=
+\begin{bmatrix} \overline{v_1} & \overline{v_2} & \cdots & \overline{v_n} \end{bmatrix}
+\vn{w}{n}
+\\
+&=
+\overline{v_1} w_1 + 
+\overline{v_2} w_2 + 
+\cdots
+\overline{v_n} w_n
+\end{align*}
+På samme måte får vi:
+\[
+\w^* \v =
+\overline{w_1} v_1 + 
+\overline{w_2} v_2 + 
+\cdots
+\overline{w_n} v_n,
+\]
+Dermed:
+\[
+\overline{\w^* \v} =
+w_1 \overline{v_1} + 
+w_2 \overline{v_2} + 
+\cdots
+w_n \overline{v_n}
+= \v^* \w
+\]
+\end{losning}
+
+
+\begin{oppgave}
+Vis at $P_{\V v}\V w$ og $\V w-P_{\V v}\V w$ er ortogonale.
+\end{oppgave}
+
+
+\begin{losning}
+Vi tar først noen merknader om matrisen~$P_\v$.
+
+Vi har
+\[
+P_\v
+= \frac{\v \v^*}{\v^* \v}
+= \frac{1}{\v^* \v} \v \v^*
+\]
+Siden $\v^* \v$ er et reelt tall, har vi:
+\[
+P_\v^*
+= \frac{1}{\v^* \v} (\v \v^*)^*
+= \frac{1}{\v^* \v} (\v^*)^* \v^*
+= \frac{1}{\v^* \v} \v \v^*
+= P_\v
+\]
+Matrisen $P_\v$ er altså sin egen adjungerte.  Videre har vi:
+\begin{align*}
+P_\v^2
+&= \left(\frac{1}{\v^* \v}\right)^2 (\v \v^*) (\v \v^*) \\
+&= \frac{1}{(\v^* \v)^2} \v (\v^* \v) \v^* \\
+&= \frac{1}{(\v^* \v)^2} (\v^* \v) \v \v^* \\
+&= \frac{1}{\v^* \v} \v \v^* \\
+&= P_\v
+\end{align*}
+Det å opphøye matrisen $P_\v$ i andre gir altså oss igjen bare den
+samme matrisen tilbake.
+
+Nå går vi løs på å vise at vektorene $P_\v \w$ og $\w - P_\v \w$ er
+ortogonale.  Ved å bruke at $P_\v^* = P_\v$ og at $P_\v^2 = P_\v$ får
+vi:
+\begin{align*}
+(P_\v \w)^* (\w - P_\v \w)
+&= \w^* P_\v^* (\w - P_\v \w) \\
+&= \w^* P_\v^* \w - \w^* P_\v^* P_\v \w \\
+&= \w^* P_\v \w - \w^* P_\v P_\v \w \\
+&= \w^* P_\v \w - \w^* P_\v \w \\
+&= 0
+\end{align*}
+Det vil si at $P_\v \w$ og $\w - P_\v \w$ er ortogonale.
+\end{losning}
+
+
+%\begin{oppgave}
+%Vis at $P_{\V v}\V w$ og $\V w-P_{\V v}\V w$ spenner ut det samme rommet som $\V v$ og $\V w$  så lenge $\V v^*\V w\neq 0$.
+%\end{oppgave}
+%
+%
+%\begin{losning}
+%Vi vet at $P_\v \w$ er parallell med $\v$ (det er jo hele meningen med
+%å projisere).  Mer presist: Vi vet at vi har
+%\[
+%P_\v \w = \frac{\v^* \w}{\v^* \v} \v
+%\]
+%der $(\v^* \w)/(\v^* \v)$ bare er et tall.  Hvis vi kaller dette
+%tallet~$a$, har vi
+%\[
+%P_\v \w = a \v
+%\qquad\text{og}\qquad
+%\v = \frac{1}{a} P_\v \w.
+%\]
+%Vi ser at vi kan skrive $\v$ og~$\w$ som lineærkombinasjoner av
+%$P_\v \w$ og $\w - P_\v \w$:
+%\begin{align*}
+%\v &= \frac{1}{a} P_\v \w \\
+%\w &= P_\v \w + (\w - P_\v \w)
+%\end{align*}
+%Vi kan også skrive $P_\v \w$ og $\w - P_\v \w$ som lineærkombinasjoner
+%av $\v$ og~$\w$:
+%\begin{align*}
+%P_\v \w &= a \v \\
+%\w - P_\v \w &= \w - a \v
+%\end{align*}
+%Dette betyr at rommet utspent av $P_\v \w$ og $\w - P_\v \w$ er det
+%samme som rommet utspent av $\v$ og~$\w$.
+%\end{losning}
+
+
+% \begin{losning}
+% \begin{punkt}
+% Dette er oppgave \textbf{10. b)} kapittel 4 (Matriser).
+% \end{punkt}
+% \begin{punkt}
+% Anta at $\V{v}_1,\dots,\V{v}_n$ er parvis ortogonale; $\V{v}_i\boldsymbol{\cdot}\V{v}_j=0$ for $i\neq j$. Vi må vise at likningen $$x_1\V{v}_1+\dots+a_n\V{v}_n=\V{0}$$ kun har triviell løsning (definisjonen på lineær uavhengighet). Prikk likningen med $\V{v}_1$ for å se at $x_1\|\V{v}_1\|^2=0$. Ettersom $\V{v}_1\neq \V{0}$ må $x_1=0$. Repeter denne prosessen for $i=2,\dots,n$ for å se at de resterende $x_i$-ene også må være lik null.
+% \end{punkt}
+% \end{losning}
+
+%\begin{oppgave} I denne oppgaven skal du utlede din egen metode.
+%\begin{punkt}
+%La $\V{v}$ være en vektor i $\mathbb{R}^n$. Forklar hvordan du kan finne en ortogonal basis $\V{v},\V{v}_2,\dots \V{v}_n$.
+%\end{punkt}
+%\begin{punkt}
+%Finn en ortogonal basis for $\mathbb{R}^3$ som inneholder $\vvv{1}{2}{3}$.
+%\end{punkt}
+%\end{oppgave}
+%
+%\begin{losning}
+%\begin{punkt}
+%La $V_1$ være det ortogonale komplementet til $\V{v}$. Ta en vilkårlig vektor $\V{v}_2$ i $V_1$. La $V_2$ være det ortogonale komplementet til $\{\V{v},\V{v}_2\}$. Ta en vilkårlig vektor $\V{v}_3$ i $V_2$. La $V_3$ være det ortogonale komplementet til $\{\V{v},\V{v}_2,\V{v}_3\}$. Ta en vilkårlig vektor $\V{v}_4$ i $V_3$. Fortsett denne prosessen til vektor $\V{v}_n$. Nå har du en kandidat $\B=(\V{v},\V{v}_2,\dots,\V{v}_n)$ til en basis. Vektorene er lineært uavhengige fordi de er ortogonale på grunn av måten de er valgt (ref tidligere oppgave). Derfor utgjør de en basis for $\mathbb{R}^n$ ($n$ lineært uavhengige vektorer spenner ut $\mathbb{R}^n$).
+%\end{punkt}
+%\begin{punkt}
+%Det ortogonale komplementet til $\vvv{1}{2}{3}$ er alle vektorer $\vvv{x}{y}{z}$ slik at $$\vvv{1}{2}{3}\boldsymbol{\cdot }\vvv{x}{y}{z}=0,$$ eller ekvivalent
+%$$x+2y+3z=0.$$ Det finnes mange løsninger\ldots Du kan f. eks ta $\V{v}_2=\vvv{1}{2}{-3}$. Nå må vi finne en vektor i det ortogonale komplementet til $\V{v}$ og~$\V{v}_2$. Dette kan -- på lik måte som ovenfor -- beskrives av ligningene
+%$$x+2y+3z=0$$
+%$$x+2y-3z=0,$$ eller ekvivalent matriseligningen $$\begin{bmatrix}
+%1 & 2 & 3 \\
+%1 & 2 & -3
+%\end{bmatrix}\vvv{x}{y}{z}=\V{0}.$$ Det finnes mange løsninger\ldots Du kan f. eks ta $\V{v}_3=\vvv{2}{-1}{0}$. Dermed utgjør -- for eksempel -- vektorene 
+%$$\vvv{1}{2}{3},\quad \vvv{1}{2}{-3},\quad \vvv{2}{-1}{0}$$ en ortogonal basis for $\mathbb{R}^3$ som inneholder $\vvv{1}{2}{3}$.
+%\end{punkt}
+%
+%\end{losning}
+
+
+%\begin{oppgave}
+%Et vektorrom med et 'prikkprodukt', også kalt indreprodukt, kalles et indreproduktrom. Vanlig notasjon er $$\langle \V{v},\V{u} \rangle,$$ i stedet for $$\V{v}\boldsymbol{\cdot}\V{u}.$$ Dette produktet skal tilfredstille de viktige egenskapene til prikkproduktet:
+%
+%\noindent
+%Symmetri: $\langle \V{v}, \V{u}\rangle =\langle \V{u}, \V{v}\rangle$.
+%
+%\noindent
+%Linearitet: $\langle a\V{v}_1+b\V{v_2}, \V{u}\rangle =a\langle \V{v}_1, \V{u}\rangle+b\langle \V{v_2}, \V{u}\rangle$.
+%
+%\noindent
+%Positiv-definitt: $\langle \V{v}, \V{v}\rangle \geq 0$, hvor vi har likhet hvis og bare hvis $\V{v}=0$.
+%
+%\begin{punkt}
+%Hva burde definisjonen av det ortogonale komplementet til en vektor $\V{u}$ i et indreproduktrom være?
+%\end{punkt}
+%
+%\begin{punkt}
+%Hva burde definisjonen av projeksjonen på en vektor $\V{u}$ i et indreproduktrom være?
+%\end{punkt}
+
+%\begin{punkt}
+%Vis at en vilkårlig vektor $\V{v}$ kan skrives entydig som en sum $\V{v}_{\V{u}}+\V{v}_{\V{u}^{\perp}}$ hvor første faktor er projeksjonen ned på $\V{u}$ og andre faktor er projeksjonen ned på det ortogonale komplementet til $\V{u}$.
+%\end{punkt}
+%
+%\end{oppgave}
+%\begin{losning}
+%\begin{punkt}
+%Alle vektorer $\V{v}$ slik at $\langle \V{v}, \V{u}\rangle=0$.
+%\end{punkt}
+%
+%\begin{punkt}
+%Projeksjonen av en vektor $\V{v}$ på $\V{u}$ er gitt ved $$\frac{\langle \V{v}, \V{u}\rangle}{\langle \V{u}, \V{u}\rangle} \V{u}.$$
+%\end{punkt}
+%\end{losning}
+%

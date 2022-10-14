@@ -1,0 +1,949 @@
+% -*- TeX-master: "oving06"; -*-
+\oppgaver{8}
+
+
+\begin{oppgave}
+La $A$ og~$B$ være følgende matriser:
+\[
+A =
+\begin{bmatrix}
+\;0 & 1 & 1 & 0 & 0 & 0 & 1\;\\
+\;0 & 0 & 0 & 0 & 1 & 0 & 1\;\\
+\;0 & 0 & 0 & 0 & 0 & 1 & 1\;\\
+\;0 & 0 & 0 & 0 & 0 & 0 & 0\;
+\end{bmatrix}
+\qquad
+B =
+\begin{bmatrix}
+ 1 & 2 & 3\\
+ 2 & 3 & 4\\
+ 3 & 4 & 5\\
+ 4 & 5 & 6
+\end{bmatrix}
+\]
+\begin{punkt}
+Finn en basis for kolonnerommet, nullrommet og radrommet til~$A$, og
+finn dimensjonen til hvert av disse rommene.
+\end{punkt}
+\begin{punkt}
+Gjør det samme for matrisen~$B$.
+\end{punkt}
+\begin{punkt}
+Ligger vektoren $(0, 1, -2, 3, -1, -1, 1)$ i nullrommet til~$A$?
+\end{punkt}
+\begin{punkt}
+Ligger vektoren $(-1, -1, -1, -1)$ i kolonnerommet til~$A$?  Ligger den
+i kolonnerommet til~$B$?
+\end{punkt}
+% I hver del: Finn en basis for kolonnerommet, nullrommet og radrommet
+% til~$A$, finn dimensjonen til hvert av disse rommene, og sjekk om
+% vektoren
+% $\begin{bmatrix}
+% 0\\
+% 1\\
+% -2\\
+% 3\\
+% -1\\
+% -1\\
+% 1
+% \end{bmatrix}$ ligger i nullrommet og om $\begin{bmatrix}
+% -1\\
+% -1\\
+% -1\\
+% -1
+% \end{bmatrix}$ ligger i kolonnerommet -- hvis spørsmålet gir mening -- for matrisen \ldots
+
+% \begin{punkt}
+% \ldots$\begin{bmatrix}
+% \;0 & 1 & 1 & 0 & 0 & 0 & 1\;\\
+% \;0 & 0 & 0 & 0 & 1 & 0 & 1\;\\
+% \;0 & 0 & 0 & 0 & 0 & 1 & 1\;\\
+% \;0 & 0 & 0 & 0 & 0 & 0 & 0\;
+% \end{bmatrix}$ 
+% \end{punkt}
+
+% \begin{punkt}
+% \ldots$\begin{bmatrix}
+% 	1 & 2 & 3\\
+% 	2 & 3 & 4\\
+% 	3 & 4 & 5\\
+% 	4 & 5 & 6
+% 	\end{bmatrix}$ 
+% \end{punkt}
+
+
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Merk at matrisen~$A$ allerede er på redusert trappeform,
+så vi trenger ikke gausseliminere.
+
+Matrisen har fire frie variabler og tre pivotelement. Dimensjonen på nullrommet er derfor lik fire, mens dimensjonen på kolonnerommet (og derfor også radrommet) er lik tre. For å finne en basis holder det å finne fire lineært uavhengige vektorer i nullrommet og tre lineært uavhengige vektorer i kolonnerommet (og radrommet).
+
+
+\noindent
+Eksempel på valg av basis: Du kan ta kolonnene og radene som svarer til pivotelementene for å finne basis for kolonne- og radrommet; kolonnene som svarer til pivotelement er alltid lineært uavhengige, og vi har tre slike kolonner. Basis for kolonnerommet: kolonne 2, 5 og 6. Basis for radrommet: rad 1, 2 og 3. Matrisen er allerede radredusert, og likningene for nullrommet er:
+\begin{align*}
+x_2+x_3+x_7 &= 0 \\
+x_5+x_7 &= 0 \\
+x_6+x_7 &= 0
+\end{align*}
+Vi kan ta $x_1=q$, $x_3=r$, $x_4=s$ og~$x_7=t$ som frie variabler.
+Da får vi følgende parametrisering av nullrommet:
+\[
+\x
+=
+\begin{bmatrix}
+q \\
+-r - t \\
+r \\
+s \\
+-t \\
+-t \\
+t
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{bmatrix}
+q
++
+\begin{bmatrix}
+0\\
+-1\\
+1\\
+0\\
+0\\
+0\\
+0
+\end{bmatrix}
+r
++
+\begin{bmatrix}
+0\\
+0\\
+0\\
+1\\
+0\\
+0\\
+0
+\end{bmatrix}
+s
++
+\begin{bmatrix}
+0\\
+-1\\
+0\\
+0\\
+-1\\
+-1\\
+1
+\end{bmatrix}
+t
+\]
+Dette betyr at
+\[
+\left(
+\begin{bmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{bmatrix},
+\ %
+\begin{bmatrix}
+0\\
+-1\\
+1\\
+0\\
+0\\
+0\\
+0
+\end{bmatrix},
+\ %
+\begin{bmatrix}
+0\\
+0\\
+0\\
+1\\
+0\\
+0\\
+0
+\end{bmatrix},
+\ %
+\begin{bmatrix}
+0\\
+-1\\
+0\\
+0\\
+-1\\
+-1\\
+1
+\end{bmatrix}
+\right)
+\]
+er en basis for nullrommet.
+\end{punkt}
+
+\begin{punkt}
+Gausseliminering av matrisen~$B$ til redusert trappeform gir:
+\[
+\begin{bmatrix}
+ 1 & 2 & 3\\
+ 2 & 3 & 4\\
+ 3 & 4 & 5\\
+ 4 & 5 & 6
+\end{bmatrix}
+\roweq
+\begin{bmatrix}
+ 1 & 0 & -1 \\
+ 0 & 1 &  2 \\
+ 0 & 0 &  0 \\
+ 0 & 0 &  0
+\end{bmatrix}
+\]
+Her er det pivotelementer i de to første kolonnene,
+så
+\[
+\left(
+\vvvv{1}{2}{3}{4},\ %
+\vvvv{2}{3}{4}{5}
+\right)
+\]
+er en basis for kolonnerommet.
+Vi får en basis for radrommet ved å ta de radene
+som ikke er null i trappeformmatrisen
+(dette ville også fungere om vi bare har trappeform,
+og ikke redusert trappeform), så
+\[
+\left(
+\vvv{1}{0}{-1},
+\vvv{0}{1}{2}
+\right)
+\]
+er en basis for radrommet.
+Både radrommet og kolonnerommet har dimensjon~$2$.
+
+Nullrommet består av alle løsninger av likningen $B\x = \0$.
+Vi ser at generell løsning av denne likningen blir
+\[
+\x = \vvv{1}{-2}{1} t
+\qquad\text{der $t$ er et vilkårlig reelt tall.}
+\]
+Dermed er
+\[
+\left(
+\vvv{1}{-2}{1}
+\right)
+\]
+en basis for nullrommet.
+Nullrommet har dimensjon~$1$.
+% Husk: Du kan sjekke om svaret ditt er riktig: Du trenger to lineært uavhengige vektorer i kolonnerommet (radrommet) og en ikke-null vektor i nullrommet. Ligger svaret ditt i ønsket underrom? Er vektorene i hvert underrom lineært uavhengige?
+\end{punkt}
+
+\begin{punkt}
+Vektoren ligger i nullrommet fordi 
+$$\begin{bmatrix}
+\;0 & 1 & 1 & 0 & 0 & 0 & 1\;\\
+\;0 & 0 & 0 & 0 & 1 & 0 & 1\;\\
+\;0 & 0 & 0 & 0 & 0 & 1 & 1\;\\
+\;0 & 0 & 0 & 0 & 0 & 0 & 0\;
+\end{bmatrix}
+\begin{bmatrix}
+0\\
+1\\
+-2\\
+3\\
+-1\\
+-1\\
+1
+\end{bmatrix}=
+\begin{bmatrix}
+0\\
+0\\
+0\\
+0
+\end{bmatrix}.
+ $$
+\end{punkt}
+
+\begin{punkt}
+Vektoren ligger ikke i kolonnerommet til~$A$ fordi systemet med totalmatrise 
+$$
+\begin{amatrix}{7}
+0 & 1 & 1 & 0 & 0 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0 & 1 & 0 & 1 & -1 \\
+0 & 0 & 0 & 0 & 0 & 1 & 1 & -1 \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 
+\end{amatrix}
+$$
+umulig kan ha løsning; den siste raden svarer til likningen $0=-1$.
+
+Vektoren ligger i kolonnerommet til~$B$; du kan sjekke at likningssystemet med totalmatrise 
+$$
+\begin{amatrix}{3}
+	1 & 2 & 3 & -1\\
+	2 & 3 & 4 & -1\\
+	3 & 4 & 5 & -1\\
+	4 & 5 & 6 & -1
+	\end{amatrix}
+$$ har løsning.
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+
+\begin{punkt}
+Finn en basis for $\P_2$. Vis at det faktisk er en basis.
+\end{punkt}
+
+\begin{punkt}
+Hva er koordinatene til $1+2x+3x^2$ i basisen du fant for $\P_2$?
+\end{punkt}
+
+\begin{punkt}
+Finn en basis for $\P_n$, der $n \ge 0$.
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+
+
+\begin{punkt}
+Vi kan for eksempel velge $(1, x, x^2)$.
+En basis er -- per definisjon -- en liste med vektorer som spenner ut rommet
+og er lineært uavhengige.
+
+\noindent
+Spenner ut: En vilkårlig vektor $a+bx+cx^2$ er trivielt en lineærkombinasjon $a\cdot 1+b\cdot x+c\cdot x^2$ av $1$, $x$ og $x^2$.
+
+\noindent
+Lineært uavhengige: Gitt en likning $a\cdot 1+b\cdot x+c\cdot x^2=0$, så må vi vise at vi kun har triviell løsning. Men et andregradspolynom kan maksimalt ha to nullpunkt, altså kan likningen umulig holde hvis ikke $a=0$, $b=0$ og~$c=0$; vi har kun triviell løsning.
+\end{punkt}
+
+
+\begin{punkt}
+I koordinatene til basisen vi valgte i $\textbf{a)}$ svarer et polynom $a_0+a_1x+a_2x^2$ til vektoren $\begin{bmatrix}
+a_0\\
+a_1\\
+a_2
+\end{bmatrix}.$ Spesielt blir $1+2x+3x^3$ vektoren $\begin{bmatrix}
+1\\
+2\\
+3
+\end{bmatrix}.$
+
+
+\noindent
+Merk: Du innførte koordinater for å løse oppgave $\textbf{3.9.}$
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+La $\V{a}_1$, $\V{a}_2$, $\u$ og~$\v$ være følgende vektorer i~$\R^3$:
+\[
+\V{a}_1 = \vvv{1}{2}{3}
+\quad
+\V{a}_2 = \vvv{2}{3}{4}
+\quad
+\u = \vvv{1}{-1}{1}
+\quad
+\v = \vvv{1}{1}{1}
+\]
+\begin{punkt}
+Se på planet i~$\R^3$ som består av alle vektorer på formen
+\[
+\u + s \cdot \V{a}_1 + t \cdot \V{a}_2
+\]
+der $s$ og~$t$ er vilkårlige tall.  Er dette planet et underrom
+av~$\R^3$?
+\end{punkt}
+\begin{punkt}
+Er planet som består av alle vektorer på formen
+\[
+\v + s \cdot \V{a}_1 + t \cdot \V{a}_2
+\]
+et underrom av~$\R^3$?
+\end{punkt}
+\begin{punkt}
+La $A = \begin{bmatrix} \V{a}_1 & \V{a}_2 \end{bmatrix}$
+være matrisen som har $\V{a}_1$ og~$\V{a}_2$ som kolonner.
+Ligger vektoren~$\u$ i kolonnerommet til denne matrisen?
+Hva med~$\v$?
+Sammenlign med det du fant ut i del~$\textbf{a)}$ og~$\textbf{b)}$.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Nei, det er ikke et underrom, for nullvektoren er ikke med.
+\end{punkt}
+
+\begin{punkt}
+Ja, det er et underrom.
+
+Det kan være lurt å legge merke til at vektoren~$\v$
+er en lineærkombinasjon av $\a_1$ og~$\a_2$:
+\[
+\v = \a_2 - \a_1
+\]
+Dette betyr at vi isteden kan se på mengden av alle vektorer på formen
+\[
+s \cdot \a_1 + t \cdot \a_2
+\]
+og få den samme mengden.
+Nå er det lett å sjekke at kriteriene for å være underrom er oppfylt:
+\begin{enumerate}
+\item Nullvektoren er med i mengden vår
+(vi får nullvektoren ved å velge $s = t = 0$).
+\item Summen av to vektorer som er med i mengden er også med i mengden:
+\[
+(s \a_1 + t \a_2)
++ (s' \a_1 + t' \a_2)
+= (s + s') \a_1 + (t + t') \a_2
+\]
+\item Om vi ganger en vektor i mengden med en skalar~$c$,
+får vi igjen en vektor i mengden:
+\[
+c \cdot (s \cdot \a_1 + t \cdot \a_2)
+= (cs) \a_1 + (ct) \a_2
+\]
+\end{enumerate}
+\end{punkt}
+
+\begin{punkt}
+Vektoren $\u$ ligger ikke i kolonnerommet,
+men vektoren $\v$ gjør det.
+Merk at kolonnerommet til~$A$ er nøyaktig det underrommet av~$\R^3$
+som ble beskrevet i del~\textbf{b)}.
+% $\begin{bmatrix}
+% 1\\
+% -1\\
+% 1
+% \end{bmatrix}$ ligger ikke i kolonnerommet (vektoren løfter kolonnerommet, som er et plan, opp fra origo); $\begin{bmatrix}
+% 1\\
+% 1\\
+% 1
+% \end{bmatrix}$ ligger i kolonnerommet (vektoren løfter ikke kolonnerommet, som er et plan, opp fra origo). 
+%
+% \noindent
+% Prøv gjerne å tegne situasjonen i denne oppgaven.
+\end{punkt}
+
+\end{losning}
+
+\begin{oppgave}
+% Vi kan si at et vektorrom er \emph{trivielt} hvis det kun består av
+% nullvektoren.
+La $A$ være en $m\times n$-matrise hvor $m<n$.
+Hvilke av følgende påstander kan vi da konkludere med?
+\begin{punkt}
+%Kolonnerommet til~$A$ er ikke trivielt.
+$\dim \Col A > 0$
+\end{punkt}
+
+\begin{punkt}
+%Nullrommet til~$A$ er ikke trivielt.
+$\dim \Null A > 0$
+\end{punkt}
+
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Usant.  For eksempel får vi $\dim \Col A = 0$ hvis $A$ er nullmatrisen.
+\end{punkt}
+
+\begin{punkt}
+Sant. Matrisen $A$ består av $n$ kolonnevektorer i $\R^m$ hvor $n>m$.
+Kolonnevektorene må derfor være lineært avhengige.
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+La $V$ være et vektorrom, og la $U_1$ og~$U_2$ være to underrom
+av~$V$.  Hvilke av følgende påstander kan vi da konkludere med?
+\begin{punkt}
+Snittet $U_1 \intersect U_2$ er et underrom av~$V$.
+\end{punkt}
+\begin{punkt}
+Unionen $U_1 \union U_2$ er et underrom av~$V$.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+Snittet er et underrom; unionen er ikke nødvendigvis et underrom.
+
+
+\noindent
+Union: Det er mange moteksempler. Du kan f. eks ta to linjer i $\R^2$ som kun krysser hverandre i origo.
+
+\noindent
+Snitt: $U_1$ og $U_2$ inneholder null og er lukket under vektorromsoperasjonene. Husk at $U_1 \cap U_2$ betyr $U_1$ og $U_2$. Null-vektoren ligger i $U_1$ og $U_2$ og derfor i $U_1\cap U_2$; summen av to vektorer i $U_1\cap U_2$ ligger i både $U_1$ og $U_2$ igjen ($U_1$ og $U_2$ er underrom); et skalarmultiplum av en vektor i $U_1\cap U_2$ ligger i både $U_1$ og $U_2$ igjen ($U_1$ og $U_2$ er underrom).
+\end{losning}
+
+
+\begin{oppgave}
+
+\begin{punkt}
+Finn en basis for vektorrommet $\M_{m \times n}$.  Hva er dimensjonen?
+\end{punkt}
+
+\begin{punkt}
+Se på følgende delmengder av~$\M_n$:
+\begin{align*}
+U \colon &\text{alle diagonalmatriser} \\
+V \colon &\text{alle inverterbare matriser} \\
+W \colon &\text{alle matriser~$A$ slik at $A = A\tr$}
+\end{align*}
+Hvilke av disse mengdene er underrom av~$\M_n$?
+\end{punkt}
+
+\begin{punkt}
+For de mengdene i del~\textbf{b)} som er underrom, hva er dimensjonen?
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+La $M_{i,j}$ være $m\times n$-matrisen som har 1 i posisjon $(i,j)$ og 0 ellers. Samlingen $M_{i,j}$, $i=1,\dots m$, $j=1,\dots n$ er en basis. Dimensjonen er antall element i en basis: $mn$.
+\end{punkt}
+
+\begin{punkt}
+$U$ og $W$ er underrom; $V$ er ikke.
+\end{punkt}
+
+\begin{punkt}
+\noindent
+Basis for $U$: Matrisene $M_{i,i}$ for $i=1,\dots,n$.
+
+\noindent
+Dimensjonen til $U$: $n$
+
+\noindent
+Basis for $W$: Matrisene $M_{i,j}+M_{j,i}$ for $i\neq j$ og $M_{i,i}$ for $i=j$.
+
+\noindent
+Hint: Element $(i,j)$ må være likt som element $(j,i)$ for symmetriske matriser, derfor inneholder $M_{i,j}+M_{j,i}$ akkurat den informasjonen du trenger.
+
+
+\noindent 
+Dimensjonen til $W$: $1+2+3+\dots +n=\frac{n(n+1)}{2}$ (vi trenger bare å telle elementene langs og under diagonalen).
+\end{punkt}
+
+
+\end{losning}
+
+
+
+\begin{oppgave}
+
+\begin{punkt}
+Forklar hvilke av vektorrommene
+\begin{align*}
+& \P_n \quad \text{(for forskjellige~$n$)} \\
+& \P \\
+& \Cf(\R) \\
+& \Cf^n(\R) \quad \text{(for forskjellige~$n$)} \\
+& \Cf^\infty(\R)
+\end{align*}
+som er underrom av hverandre.
+\end{punkt}
+
+\begin{punkt}
+Hvilke av vektorrommene i $\textbf{a)}$ er endeligdimensjonale?
+Hvilke er uendeligdimensjonale?
+\end{punkt}
+
+
+\end{oppgave}
+
+\begin{losning}
+
+\begin{punkt}
+Vektorrommene~$\P_n$, for forskjellige~$n$, er underrom av hverandre:
+\[
+\P_0 \subset \P_1 \subset \P_2 \subset \cdots
+\]
+Vektorrommene~$\Cf^n(\R)$, for forskjellige~$n$, også
+underrom av hverandre:
+\[
+\Cf(\R) \supset \Cf^1(\R) \supset \Cf^2(\R) \supset \Cf^3(\R) \supset \cdots
+\]
+For hver~$n$ har vi:
+\[
+\P_n \subset \P \subset \Cf^\infty(\R) \subset \Cf^n(\R) \subset \Cf(\R)
+\]
+Alle $n$-tegradspolynomer er polynomer;
+alle polynomer er uendelig mange ganger deriverbare;
+alle uendelig mange ganger deriverbare funksjoner er deriverbare $n$ ganger;
+alle $n$ ganger deriverbare funksjoner er kontinuerlige (deriverbar impliserer kontinuitet).
+\end{punkt}
+
+\begin{punkt}
+Du har vist at $\P_n$ har en endelig basis tidligere, og det er derfor endeligdimensjonalt.
+Vi har sett at $\P$ er uendeligdimensjonalt i notatet.
+Derfor er resten av vektorrommene uendeligdimensjonale; alle har et uendeligdimensjonalt underrom. 
+\end{punkt}
+
+
+\end{losning}
+
+
+
+\begin{oppgave}
+La
+\[
+V = \left\{\, \boks{r} \;\middle|\; \text{$r \in \R$ og $r > 0$} \,\right\}
+\]
+være mengden der hvert element er en boks som inneholder et positivt reelt tall,
+slik at for eksempel
+\[
+\boks{5}\,,\quad
+\boks{\frac{3}{4}}\,,\quad
+\boks{\pi}\quad\text{og}\quad
+\boks{9328}
+\]
+er elementer i~$V$.  Definer vektoraddisjon og skalarmultiplikasjon
+for~$V$ slik:
+\begin{align*}
+\boks{r} + \boks{s} &= \boks{rs} \\
+c \cdot \boks{r}    &= \boks{r^c}
+\end{align*}
+Er $V$ et vektorrom?
+\end{oppgave}
+
+\begin{losning}
+Ja, $V$ er et vektorrom.
+
+Additiv identitet: $\boks{1}$, Additiv invers: $\boks{1/a}$. Du kan nå sjekke aksiomene (V1)--(V8)
+
+Hint: Parantes betyr hva man skal regne ut først.
+\end{losning}
+
+\begin{oppgave}
+Vi skriver
+\[
+\Z=\{\dots,-2,-1,0,1,2,\dots\}
+\]
+for mengden av heltall.
+% I denne oppgaven skal vi se på to
+% forskjellige måter man kan prøve å gjøre $\Z$ til et vektorrom.  I
+% hvert tilfelle skal du finne ut om det faktisk blir et vektorrom eller
+% ikke.
+
+\begin{punkt}
+Hvis vi tenker på elementene i vektorrommet~$\R^1$ som bare tall,
+%(istedenfor kolonnevektorer med ett tall i),
+kan vi se på $\Z$ som en delmengde av~$\R^1$.
+Er $\Z$ et underrom av $\R^1$?
+\end{punkt}
+
+\begin{punkt}
+Nå prøver vi å gjøre~$\Z$ til et vektorrom ved å definere
+vektoraddisjon og skalarmultiplikasjon direkte.  Definer
+vektoraddisjon som vanlig addisjon av tall, og definer
+skalarmultiplikasjon av et reelt tall~$r$ og et heltall~$n$ ved
+\[
+r \ast n = \lfloor rn \rfloor,
+\]
+der uttrykket $\lfloor rn \rfloor$ betyr tallet~$rn$ rundet ned til et
+heltall.  (Vi bruker symbolet~$\ast$ for skalarmultiplikasjonen her
+for å ikke blande den sammen med vanlig multiplikasjon av tall.)
+
+% Definer addisjon i $\mathbb{Z}$ på vanlig måte, og definer en
+% skalarmultiplikasjon $$r\ast n=\lfloor rn\rfloor$$ hvor
+% $\lfloor rn \rfloor$ runner ned til nærmeste heltall.
+
+Er $\Z$ -- med disse operasjonene -- et vektorrom?
+\end{punkt}
+
+\end{oppgave}
+
+
+\begin{losning}
+
+\begin{punkt}
+Nei. 
+
+\noindent
+$\mathbb{Z}$ er ikke lukket under skalarmultiplikasjon: Hvis du multipliserer et heltall med et reelt tall får du ikke nødvendigvis et heltall. Eksempel: $\frac{1}{2}\cdot 3=\frac{3}{2}$ er ikke et heltall.
+\end{punkt}
+
+\begin{punkt}
+Nei.
+
+\noindent
+Du kan for eksempel sjekke at $(ab)\ast n \neq a\ast (b\ast n)$ for alle valg av relle tall $a$ og $b$, og heltall $n$. 
+
+\noindent
+Eksempel: $\lfloor \frac{1}{2}\cdot 1 \rfloor =0$ slik at $2 \ast(\frac{1}{2}\ast 1)=0$. Men $$(2\cdot \frac{1}{2})\ast 1=1 \ast 1=1.$$
+
+
+\noindent
+Merk: Vi viste altså at $\mathbb{Z}$ med denne skalarmultiplikasjonen umulig kan være et vektorrom. Mer generelt kan man vise at det ikke finnes noen vektorromstruktur på $\mathbb{Z}$. Dette henger sammen med at noen typer uendelig er større enn andre.
+\end{punkt}
+
+\end{losning}
+
+\begin{oppgave}
+Hvis $V$ er et vektorrom som er en endelig mengde, hva kan du da si om
+antall elementer i~$V$?
+\\
+Hint: Kan $V$ ha null elementer?  Ett element?  To elementer?  Flere
+enn to?
+\end{oppgave}
+
+\begin{losning}
+Vektorrommet må bestå av ett element; null-vektoren. Med en gang det finnes en ikke-null vektor $\V{v}$ får vi uendelige mange vektorer; $t\V{v}$ hvor $t$ er et tall.
+\end{losning}
+
+
+\begin{oppgave}
+La $\lambda$ være en egenverdi til en $n\times n$-matrise $A$. Vis at egenrommet til $\lambda$ er et underrom av $\R^n$.
+\end{oppgave}
+
+\begin{losning}
+Det holder å vise at egenrommet til $\lambda$ er lukket under vektorromsoperasjonene og inneholder null-vektoren.
+
+\noindent
+Null-vektoren: Dette følger direkte fra definisjonen (egenrommet til $\lambda$ består av egenvektorene og null-vektoren).
+
+
+\noindent
+Addisjon: Hvis $\V{x}$ og $\V{y}$ er to vektorer i egenrommet til $\lambda$ har vi per definisjon at $A\V{x}=\lambda \V{x}$ og $A\V{y}=\lambda \V{y}$ (i spesialtilfellet $\V{0}$ har vi alltid $A\V{0}=\V{0}=\lambda \V{0}$). Vi må vise at $\V{x}+\V{y}$ er en egenvektor til $\lambda$: $$A(\V{x}+\V{y})=A\V{x}+A\V{y}=\lambda \V{x}+ \lambda \V{y}=\lambda(\V{x}+\V{y}),$$ $\V{x}+\V{y}$ er altså i egenrommet.
+
+\noindent
+Skalarmultiplikasjon: Hvis $\V{x}$ er i egenrommet til $\lambda$ og $c$ er en konstant har vi at $$A(c\V{x})=c(A \V{x})=c(\lambda \V{x})=\lambda(c \V{x}),$$ som betyr at $c\V{x}$ ligger i egenrommet til $\lambda$.
+\end{losning}
+
+
+
+
+
+\begin{oppgave}
+La mengden $D$ være det åpne intervallet mellom $-\pi/2$ og~$\pi/2$:
+\[
+D = \left( - \frac{\pi}{2}, \frac{\pi}{2} \right)
+\]
+Se på funksjonene $\sin$, $\cos$ og~$\tan$ som vektorer i~$\Cf(D)$.
+\begin{punkt}
+Er de lineært uavhengige?
+\end{punkt}
+\begin{punkt}
+Kan du få et annet svar ved å isteden se på dem som vektorer i
+$\Cf(E)$, der $E$ er en delmengde av~$D$?
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+For å svare på spørsmålet må vi utforske om det finnes konstanter $a$, $b$ og $c$ slik at $$a\cos(x)+b\sin(x)+c\tan(x)=0$$ for alle $x$ i $D$. Velg $x=0$ for å se at $a=0$ ettersom $\sin(0)=0$ og $\tan(0)=0$. Vi har $\tan(x)=\frac{\sin(x)}{\cos(x)}$ som gir likningen $$b\sin(x)=-c\frac{\sin(x)}{\cos(x)}$$ for alle $x$ i $D$ . Sinus er aldri null for $x\neq 0$ i $D$ slik at vi kan stryke $\sin(x)$ -- på denne delen av $D$ -- og få likningen $$\cos(x)=\frac{-c}{b}.$$ Men Cosinus er helt klart ikke konstant for alle $x\neq 0$ i $D$, så det kan ikke finnes noen ikke-trivielle løsninger. Vektorene er altså lineært uavhengige.
+\end{punkt}
+
+\begin{punkt}
+Ja. 
+
+\noindent
+Eksempel på løsning: La $E$ være ett punkt i $D$ (du kan velge dette punktet vilkårlig). En funksjon fra ett punkt til $\R$ er jo bare et tall i $\R$. Vektorrommet $\Cf(E)$ er altså bare vektorrommet $\R$. Tre vektorer (tall) i $\R$ er selvfølgelig lineært avhengige (vektorrommet er endimensjonalt).
+\end{punkt}
+
+\end{losning}
+
+
+\begin{oppgave}
+La $V$ være et vektorrom.
+Vis at følgende påstander følger fra vektorromsaksiomene.
+% [Alternativt:]
+% Finn ut om følgende påstander må være sanne
+% eller ikke, ved å enten vise at de følger fra aksiomene eller at det
+% finnes et vektorrom der de ikke stemmer.
+\begin{punkt}
+Det additive identitetselementet er entydig.  Det finnes altså
+nøyaktig én vektor~$\V{0}$ i~$V$ som er slik at
+$\V{u} + \V{0} = \V{u}$ for alle vektorer~$\V{u}$.
+\end{punkt}
+\begin{punkt}
+Hvis $\V{u} + \V{v} = \V{u} + \V{w}$ for tre vektorer $\V{u}$, $\V{v}$
+og~$\V{w}$ i~$V$, så følger det at $\V{v} = \V{w}$.
+\end{punkt}
+\begin{punkt}
+Additive inverser er entydige.  For hver vektor~$\V{u}$ i~$V$ finnes
+det altså kun én vektor~$-\V{u}$ i~$V$ som er slik at
+$\V{u} + (-\V{u}) = \V{0}$.
+\end{punkt}
+\end{oppgave}
+
+\begin{losning}
+\begin{punkt}
+Hvis $\V{0}_1$ og~$\V{0}_2$ er identitetselementer, så har vi:
+\begin{align*}
+\V{0}_1
+ &= \V{0}_1 + \V{0}_2 &&\text{(V3), $\V{0}_2$ er identitetselement} \\
+ &= \V{0}_2 + \V{0}_1 &&\text{(V2)} \\
+ &= \V{0}_2           &&\text{(V3), $\V{0}_1$ er identitetselement}
+\end{align*}
+\end{punkt}
+\begin{punkt}
+Fra likheten $\V{u} + \V{v} = \V{u} + \V{w}$ får du, ved å bruke
+aksiom~(V2) på begge sider:
+\[
+\V{v} + \V{u} = \V{w} + \V{u}
+\]
+Vi vet fra aksiom~(V4) at $\V{u}$ har en additiv invers~$-\V{u}$.
+Legg til denne på hver side av likheten over; da får du:
+\[
+(\V{v} + \V{u}) + (-\V{u}) = (\V{w} + \V{u}) + (-\V{u})
+\]
+% Ved å først bruke aksiom~(V3), deretter (V2), (V4), (V2), (V1), får
+% du at $\V{v}$ kan omskrives slik:
+% \begin{align*}
+% \V{v}
+%  &\stackrel{\text{(V3)}}{=} \V{v} + \V{0}
+%   \stackrel{\text{(V2)}}{=} \V{0} + \V{v}
+%   \stackrel{\text{(V4)}}{=} (\V{u} + (-\V{u})) + \V{v} \\
+%  &\stackrel{\text{(V2)}}{=} (-\V{u} + \V{u}) + \V{v}
+%   \stackrel{\text{(V1)}}{=} -\V{u} + (\V{u} + \V{v})
+% \end{align*}
+% På samme måte får du:
+% \begin{align*}
+% \V{w}
+%  &\stackrel{\text{(V3)}}{=} \V{w} + \V{0}
+%   \stackrel{\text{(V2)}}{=} \V{0} + \V{w}
+%   \stackrel{\text{(V4)}}{=} (\V{u} + (-\V{u})) + \V{w} \\
+%  &\stackrel{\text{(V2)}}{=} (-\V{u} + \V{u}) + \V{w}
+%   \stackrel{\text{(V1)}}{=} -\V{u} + (\V{u} + \V{w})
+% \end{align*}
+%---
+%v = v + 0 = 0 + v = (u + -u) + v = (-u + u) + v = -u + (u + v)
+%w = w + 0 = 0 + w = (u + -u) + w = (-u + u) + w = -u + (u + w)
+%----
+Bruk aksiom~(V1) på begge sider:
+\[
+\V{v} + (\V{u} + (-\V{u})) = \V{w} + (\V{u} + (-\V{u}))
+\]
+Bruk aksiom~(V4):
+\[
+\V{v} + \V{0} = \V{w} + \V{0}
+\]
+Bruk aksiom~(V3):
+\[
+\V{v} = \V{w}
+\]
+\end{punkt}
+\begin{punkt}
+Bruk resultatet vist i del~\textbf{b)}.  Hvis to vektorer $\V{v}$
+og~$\V{w}$ begge er additive inverser til~$\V{u}$, så har vi
+\[
+\V{u} + \V{v} = \V{0} = \V{u} + \V{w},
+\]
+og da gir resultatet fra del~\textbf{b)} at
+\[
+\V{v} = \V{w}.
+\]
+\end{punkt}
+\end{losning}
+
+\begin{oppgave} \textbf{Utfordring}
+
+\noindent
+Vi har kun definert hva en basis er for endeligdimensjonale
+vektorrom. For å definere en basis til et
+uendeligdimensjonalt vektorrom, må vi først forstå hva i) spenne ut
+og ii) lineær uavhengighet skal bety for uendelige mengder.
+
+\smallskip
+\noindent
+Hvis $S$ er en uendelig mengde av vektorer i et vektorrom~$V$,
+så definerer vi følgende:
+
+\noindent
+i) Vi sier at $S$ \emph{spenner ut} $V$ dersom enhver vektor $\V{v}$ i
+$V$ kan skrives som en lineærkombinasjon av et endelig antall vektorer
+i~$S$.
+
+\noindent
+ii) Vi sier at $S$ er \emph{lineært uavhengig} dersom enhver
+likning
+\[
+x_1\V{s}_1+\dots x_n\V{s}_n=\V{0}
+\]
+(hvor $\V{s}_i$-ene er vektorer i $S$) kun har den trivielle løsningen
+$x_i=0$ for alle $i$.
+
+\smallskip
+\noindent
+Nå kan vi definere en basis for vilkårlige vektorrom:
+
+\noindent
+En delmengde~$\B$ av et vektorrom~$V$ er en \emph{basis} for~$V$
+dersom den spenner ut~$V$ og er lineært uavhengig.
+
+\smallskip\noindent
+(Her definerer vi en basis som en mengde og ikke en liste,
+siden det blir vanskelig å ha en rekkefølge på basisvektorene
+når det kan være uendelig mange av dem.)
+
+% \begin{punkt}
+% Vis at vi får tilbake den gamle definisjonen av en basis for endeligdimensjonale vektorrom.
+% \end{punkt}
+
+\begin{punkt}
+Foreslå en basis for det uendeligdimensjonale vektorrommet $\P$.
+\end{punkt}
+
+\begin{punkt}
+Vis at forslaget ditt er en basis.
+\end{punkt}
+
+\end{oppgave}
+
+
+\begin{losning}
+
+
+% \begin{punkt}
+% Hvis $V$ er endeligdimensjonalt ser vi at definisjonen for å spenne ut er den samme. For lineært uavhengig hadde vi at $\V{v}_1,\dots,\V{v}_n$ er lineært uavhengige dersom $$x_1\V{v}_1+\dots+x_n\V{v}_n=\V{0}$$ kun har triviell løsning. I den nye definisjonen har vi at alle likninger $$x_1\V{v}_{i_1}+\dots+x_k\V{v}_{i_k}=\V{0},$$ hvor $\{\V{v}_{i_1},\dots,\V{v}_{i_k}\}$ er en endelig delmengde av $\{\V{v}_1,\dots,\V{v}_n\}$, kun har triviell løsning. Vi kan spesielt ta $\{\V{v}_1,\dots,\V{v}_n\}$ som en delmengde av seg selv for å få tilbake den gamle definisjonen.
+% \end{punkt}
+
+\begin{punkt}
+En naturlig basis for $\P_n$ er gitt av $1,x\dots,x^n$. Dette er akkurat hva vi trenger for å få alle $n$-tegradspolynom. Basert på dette virker det rimelig at $\B=\{1,x,x^2,x^3,\dots\}$ er en basis for $\P$ (da burde vi akkurat ha det vi trenger for å få alle polynomer av vilkårlig grad). 
+\end{punkt}
+
+\begin{punkt}
+Spenner ut: Et vilkårlig polynom kan skrives på formen $a_0x^{i_0}+a_1x^{i_1}+\dots +a_kx^{i_k}$ hvor $$i_0<i_1<\dots<i_k$$ er naturlige tall. Men dette polynomet er automatisk en lineærkombinasjon av $x^{i_0},x^{i_1},\dots,x^{i_k}$ som er en delmengde av $\B$.
+
+\noindent
+Lineært uavhengig: Gitt en likning på formen $$a_0x^{i_0}+a_1x^{i_1}+\dots +a_kx^{i_k}=0,$$ må vi vise at den kun har triviell løsning. Men dette er et $i_k$-tegradspolynom, og har derfor maksimalt $i_k$ nullpunkt; polynomet kan umulig være null for alle tall $x$. Dette viser at vi kun har triviell løsning.
+
+\noindent
+Dette viser at $\B$ spenner ut og er lineært uavhengig, som er definisjonen på en basis.
+\end{punkt}
+
+\end{losning}
+
+
+
+
+
+

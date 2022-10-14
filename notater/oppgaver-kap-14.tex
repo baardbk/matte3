@@ -1,0 +1,297 @@
+% -*- TeX-master: "oving11"; -*-
+\oppgaver{14}
+
+
+\begin{oppgave}
+Skissér faseplottet til systemet $A\V y=\V{y}'$ når
+\begin{punkt}
+$A= \begin{bmatrix}
+2 & 3\\
+-1 & -2
+\end{bmatrix}
+$	
+\end{punkt}
+
+\begin{punkt}
+	$A= \begin{bmatrix}
+	7 & -1\\
+	3 & 3
+	\end{bmatrix}
+	$	
+\end{punkt}
+
+\begin{punkt}
+	$A= \begin{bmatrix}
+	-3 & 2\\
+	-1 & -1
+	\end{bmatrix}
+	$	
+\end{punkt}
+
+\begin{punkt}
+	$A= \begin{bmatrix}
+	-3 & -9\\
+	2 & 3
+	\end{bmatrix}
+	$	
+\end{punkt}
+
+\end{oppgave}
+
+
+\begin{losning}
+Vi ber kun om en skisse. Det holder å finne egenverdiene for å se hvordan systemet oppfører seg.
+	\begin{punkt}
+		Egenverdiene er $-1$ og~$1$, derfor får vi en sadel om origo.
+	\end{punkt}
+	
+	\begin{punkt}
+		Egenverdiene er $4$ og~$6$, derfor får vi en ustabilt likevektsløsning.
+	\end{punkt}
+	
+	\begin{punkt}
+		Egenverdiene er $2+i$ og~$2-i$, derfor får vi spiraler som er sirkulære og utgående fra origo.
+	\end{punkt}
+	
+	\begin{punkt}
+		Egenverdiene er $3i$ og~$-3i$, derfor får vi sirkulære baner om origo.
+	\end{punkt}
+	
+\end{losning}
+
+
+\begin{oppgave}
+Finn generell løsning av $A\V y=\V y'$ når
+\begin{punkt}
+$
+A=
+\begin{bmatrix}
+2 & 3 & 5\\
+0 & 3 & 5\\
+0 & 0 & 5
+\end{bmatrix}
+$ 
+\end{punkt}
+%
+\begin{punkt}
+$
+A=
+\begin{bmatrix}
+3 & -1 & 2\\
+3 & -1 & 6\\
+-2 & 2 & -2
+\end{bmatrix}$
+\end{punkt}
+
+\begin{punkt}
+$
+A=
+\begin{bmatrix}
+0 & -1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 3
+\end{bmatrix}$
+\end{punkt}
+
+
+
+\begin{punkt}
+$
+A=
+\begin{bmatrix}
+0 & -1 & 1& 5\\
+1 & 0 & 2& 6\\
+0 & 0 & 3 & 7\\
+0 & 0 & 4 & 0
+\end{bmatrix}$
+\end{punkt}
+
+
+\end{oppgave}
+
+\begin{losning}
+Du fant egenverdier og egenvektorer til alle matrisene i kapittel 13. Du trenger derfor bare å sette inn i formelen for generell løsning.
+
+
+\begin{punkt}
+	$$\V{y}=c_1\vvv{1}{0}{0}e^{2t}+c_2\vvv{3}{1}{0}e^{3t}+c_3\vvv{25}{15}{6}e^{5t}$$
+\end{punkt}
+
+\begin{punkt}
+	$$\V{y}=c_1\vvv{1}{1}{0}e^{2t}+c_2\vvv{-2}{0}{1}e^{2t}+c_3\vvv{1}{3}{-2}e^{-4t}$$
+\end{punkt}
+
+\begin{punkt}
+$$	\begin{aligned}
+	\V{y}= {} & c_1\vvv{0}{0}{1}e^{3t}+c_2\left(\cos (t) \vvv{0}{1}{0}-\sin (t) \vvv{1}{0}{0}\right)\\
+	& +c_3\left(\cos (t) \vvv{1}{0}{0}+\sin (t) \vvv{0}{1}{0}\right)
+	\end{aligned}$$
+	
+\end{punkt}
+
+\begin{punkt} 
+$$	\begin{aligned}
+	\V{y}= {} & c_1\vvvv{20}{12}{17}{-17}e^{-4t} +c_2\vvvv{151}{293}{350}{200}e^{7t}\\
+	& +c_3\left(\cos (t) \vvvv{0}{1}{0}{0}-\sin (t) \vvvv{1}{0}{0}{0}\right)\\
+	& +c_4\left(\cos (t) \vvvv{1}{0}{0}{0}+\sin (t) \vvvv{0}{1}{0}{0}\right)
+	\end{aligned}$$
+
+\end{punkt}
+
+
+	
+\end{losning}
+
+\begin{oppgave}
+Løs initialverdiproblemene $A\V y= \V y '$, $\V{y}(0)=\V{y}_0$ når 
+
+\begin{punkt}
+	$
+	A=
+	\begin{bmatrix}
+	2 & 3 & 5\\
+	0 & 3 & 5\\
+	0 & 0 & 5
+	\end{bmatrix}
+	$, $
+	\V{y}_0=\vvv{1}{0}{0}
+	$
+\end{punkt}
+%
+\begin{punkt}
+	$
+	A=
+	\begin{bmatrix}
+	3 & -1 & 2\\
+	3 & -1 & 6\\
+	-2 & 2 & -2
+	\end{bmatrix}$, $
+	\V{y}_0=\vvv{1}{-1}{1}
+	$
+\end{punkt}
+
+\begin{punkt}
+	$
+	A=
+	\begin{bmatrix}
+	0 & -1 & 0\\
+	1 & 0 & 0\\
+	0 & 0 & 3
+	\end{bmatrix}$, $
+	\V{y}_0=\vvv{1}{2}{3}
+	$
+\end{punkt}
+
+
+\end{oppgave}
+
+\begin{losning}
+
+
+\begin{punkt}
+	$$\V{y}=\vvv{1}{0}{0}e^{2t}$$
+\end{punkt}
+
+\begin{punkt}
+	$$\V{y}=2\vvv{1}{1}{0}e^{2t}-\vvv{1}{3}{-2}e^{-4t}$$
+\end{punkt}
+
+\begin{punkt}
+	$$	\begin{aligned}
+	\V{y}= {} & 3\vvv{0}{0}{1}e^{3t}+2(\cos (t) \vvv{0}{1}{0}-\sin (t) \vvv{1}{0}{0})\\
+	& +(\cos (t) \vvv{1}{0}{0}+\sin (t) \vvv{0}{1}{0})
+	\end{aligned}$$
+	
+\end{punkt}
+
+
+	
+
+\end{losning}
+
+\begin{oppgave}
+Løs initialverdiproblemet $$
+\begin{bmatrix}
+0 & -1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 3
+\end{bmatrix}
+\V{y}=\V{y}',\quad \V{y}\left(\frac{\pi}{2}\right)=\vvv{1}{1}{1}.
+$$
+\end{oppgave}
+
+\begin{losning}
+	$$	\begin{aligned}
+	\V{y}= {} & \vvv{0}{0}{1}e^{3(t-\frac{\pi}{2})}-\left(\cos (t) \vvv{0}{1}{0}-\sin (t) \vvv{1}{0}{0}\right)\\
+	& +\left(\cos (t) \vvv{1}{0}{0}+\sin (t) \vvv{0}{1}{0}\right)
+	\end{aligned}$$
+\end{losning}
+
+
+\begin{oppgave}
+Vis at systemet
+$$
+\begin{bmatrix}
+3 & -1 & 2\\
+3 & -1 & 6\\
+-2 & 2 & -2
+\end{bmatrix} \V y= \V{y} '$$
+med en gitt initialverdi $\V{y}(0)=\V{y}_0$ har en entydig løsning.\\
+
+\noindent
+\emph{Hint}: Du kan anta at den generelle løsningen inneholder alle løsninger.
+\end{oppgave}
+
+\begin{losning}
+Vi har sett at den generelle løsningen er 
+$$\V{y}=c_1\vvv{1}{1}{0}e^{2t}+c_2\vvv{-2}{0}{1}e^{2t}+c_3\vvv{1}{3}{-2}e^{-4t}.$$ Det gjenstår kun å bestemme koeffisientene fra initialverdiene:
+$$c_1\vvv{1}{1}{0}+c_2\vvv{-2}{0}{1}+c_3\vvv{1}{3}{-2}=\V{y}_0.$$ Dette kan skrives som en matriselikning
+$$\begin{bmatrix}
+1 & -2 & 1\\
+1 & 0 & 3\\
+0 & 1 & -1
+\end{bmatrix} \V c= \V{y}_0$$ hvor $\V c=\vvv{c_1}{c_2}{c_3}$. Du kan sjekke at kolonnene til denne matrisen er inverterbar. Dermed er det et entydig valg av koeffisienter $c_1$, $c_2$ og~$c_3$; løsningen er dermed entydig ettersom den generelle løsningen inneholder alle løsninger.
+\end{losning}
+
+%\newpage
+\begin{oppgave}\textbf{[Utfordring]}
+	
+\noindent
+Husk at glatte funksjoner $f :\mathbb{R}\rightarrow \mathbb{R}$ er et vektorrom. På samme måte danner glatte vektorfunksjoner $\mathbf f:\mathbb{R}\rightarrow \mathbb{R}^n$ et vektorrom $V$ med addisjon
+$$(\mathbf f + \mathbf g)(t)=\mathbf{f}(t)+\mathbf{g}(t),$$ og skalarmultiplikasjon
+$$(c \mathbf f )(t)=c\mathbf{f}(t).$$
+
+\begin{punkt}
+Forklar hvorfor alle løsningene til et system $A\V y=\V{y}'$ danner et underrom av $V$.
+\end{punkt}
+
+\begin{punkt}
+Hva er dimensjonen til rommet av alle løsninger til $$
+\begin{bmatrix}
+3 & -1 & 2\\
+3 & -1 & 6\\
+-2 & 2 & -2
+\end{bmatrix} \V y= \V{y} ' ?$$
+
+\noindent
+\emph{Hint}: Bruk forrige oppgave.
+\end{punkt}
+
+
+\end{oppgave}
+
+
+
+
+
+\begin{losning}
+	\begin{punkt}
+		Dette er superposisjonsprinsippet.
+	\end{punkt}
+	
+	\begin{punkt}
+	Vi viste i forrige oppgave at en løsning er entydig bestemt av en gitt initialverdi. Initialverdiene danner et tredimensjonalt rom. Derfor er dimensjonen lik tre.
+	\end{punkt}
+	
+	
+\end{losning}
